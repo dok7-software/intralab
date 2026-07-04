@@ -20,16 +20,16 @@ export function InstitutionalFooter() {
           <Image
             src={assets.logos.generalitat}
             alt="Logotipo oficial del Departament d'Empresa i Treball (PIV Generalitat de Catalunya)"
-            width={200}
-            height={56}
-            className="h-12 w-auto object-contain sm:h-14"
+            width={250}
+            height={70}
+            className="h-[3.75rem] w-auto object-contain sm:h-[4.375rem]"
           />
           <Image
             src={assets.logos.eu}
             alt='Emblema UE + "Cofinançat per la Unió Europea"'
-            width={200}
-            height={56}
-            className="h-12 w-auto object-contain sm:h-14"
+            width={250}
+            height={70}
+            className="h-[3.75rem] w-auto object-contain sm:h-[4.375rem]"
           />
           <Image
             src={assets.logos.network22}

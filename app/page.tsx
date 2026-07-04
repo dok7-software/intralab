@@ -1,6 +1,7 @@
 import { ApplicationForm } from "@/components/sections/ApplicationForm";
 import { Calendar } from "@/components/sections/Calendar";
 import { FAQ } from "@/components/sections/FAQ";
+import { FormIntro } from "@/components/sections/FormIntro";
 import { Hero } from "@/components/sections/Hero";
 import { ProgramIncludes } from "@/components/sections/ProgramIncludes";
 import { TargetAudience } from "@/components/sections/TargetAudience";
@@ -16,10 +17,11 @@ export default function Home() {
         <TargetAudience />
         <ProgramIncludes />
         <Calendar />
-        <ApplicationForm />
+        <FormIntro />
         <FAQ />
       </main>
       <InstitutionalFooter />
+      <ApplicationForm />
     </>
   );
 }

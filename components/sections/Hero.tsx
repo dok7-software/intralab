@@ -65,16 +65,16 @@ export function Hero() {
                   <Image
                     src={assets.logos.eu}
                     alt="Cofinançat per la Unió Europea"
-                    width={160}
-                    height={44}
-                    className="h-9 w-auto object-contain"
+                    width={200}
+                    height={55}
+                    className="h-[2.8125rem] w-auto object-contain"
                   />
                   <Image
                     src={assets.logos.generalitat}
                     alt="Generalitat de Catalunya"
-                    width={160}
-                    height={44}
-                    className="h-9 w-auto object-contain"
+                    width={200}
+                    height={55}
+                    className="h-[2.8125rem] w-auto object-contain"
                   />
                 </div>
               </div>

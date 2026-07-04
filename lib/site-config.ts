@@ -5,7 +5,7 @@ export const siteConfig = {
   url: "https://intralab22.com",
   hero: {
     deadline: "PLACES OBERTES FINS EL 18 DE JULIOL",
-    startDate: "INICI DEL PROGRAMA EL 15 DE SEPTEMBRE",
+    startDate: "INICI DEL PROGRAMA EL 14 DE SEPTEMBRE",
     title: "IntraLab 22@",
     subtitle:
       "Programa de Preacceleració d'Intraemprenedoria Tecnològica",
@@ -15,7 +15,8 @@ export const siteConfig = {
   valueProposition: {
     title:
       "Convierte el reto de tu empresa en una solución validada en el mercado.",
-    copy: "IntraLab 22@ no parte de ideas al aire, sino de los problemas reales de tu día a día. En 7 meses te damos la metodología, la mentoría y el ecosistema 22@ para convertir ese reto en un proyecto listo para facturar.",
+    copy: "IntraLab 22@ no parte de ideas al aire, soluciona los problemas reales de tu día a día. En 4 meses te damos la metodología, la mentoría y el ecosistema 22@ para convertir ese reto en un proyecto listo para facturar.",
+    cta: "Quiero participar",
   },
   targetAudience: {
     title: "Para quienes lideran la transformación",
@@ -31,9 +32,9 @@ export const siteConfig = {
           "Profesionales y directivos con capacidad de pilotar proyectos disruptivos dentro de su empresa.",
       },
       {
-        label: "Perfiles tecnológicos",
+        label: "Empresas industriales y tecnológicas",
         description:
-          "Especialistas que quieren resolver retos reales junto a empresas del ecosistema 22@.",
+          "Organizaciones que quieren aplicar innovación real a sus procesos, productos o líneas de negocio.",
       },
     ],
   },
@@ -58,12 +59,16 @@ export const siteConfig = {
     milestones: [
       { date: "24 julio 2026", milestone: "Cierre de candidaturas" },
       { date: "27 julio 2026", milestone: "Selección de proyectos" },
-      { date: "16 septiembre 2026", milestone: "Kick Off del programa" },
+      { date: "14 septiembre 2026", milestone: "Kick Off del programa" },
       {
-        date: "16 diciembre 2026",
+        date: "14 diciembre 2026",
         milestone: "Demo Day ante empresas, mentores e inversores",
       },
     ],
+  },
+  formIntro: {
+    copy: "Completa el formulario. Si eres seleccionado, formarás parte de la nueva edición de IntraLab 22@.",
+    cta: "Enviar candidatura",
   },
   applicationForm: {
     title: "Formulario de Admisión de Proyectos – Convocatoria 2026",
@@ -118,7 +123,7 @@ export const siteConfig = {
     {
       question: "¿Qué pasa después del Demo Day?",
       answer:
-        "Pasas a formar parte de la red de comisiones sectoriales de 22@Network, para escalar tu proyecto o levantar capital.",
+        "Te incorporas a la red del ecosistema 22@ — empresas, universidades, centros tecnológicos y expertos — que te acompaña en el crecimiento de tu proyecto.",
     },
   ],
   institutionalFooter: {

@@ -75,7 +75,7 @@ export function ApplicationForm() {
 
   return (
     <section
-      id="formulario"
+      id="formulario-admision"
       className="w-full px-8 py-20 sm:px-12 lg:px-16 xl:px-20"
       style={{ backgroundColor: "#171219" }}
     >
