@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { assets } from "@/lib/assets";
 import { siteConfig } from "@/lib/site-config";
@@ -13,19 +13,17 @@ export function Hero() {
   const slides = assets.heroSlides;
 
   const [current, setCurrent] = useState(0);
-  const [visible, setVisible] = useState(true);
+
+  const goToSlide = useCallback((index: number) => {
+    setCurrent(index);
+  }, []);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      // fade out → swap → fade in
-      setVisible(false);
-      setTimeout(() => {
-        setCurrent((prev) => (prev + 1) % slides.length);
-        setVisible(true);
-      }, 400);
+    const timer = window.setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
     }, INTERVAL_MS);
 
-    return () => clearInterval(timer);
+    return () => window.clearInterval(timer);
   }, [slides.length]);
 
   return (
@@ -35,11 +33,7 @@ export function Hero() {
       style={{ backgroundColor: "#171219" }}
     >
       <div className="grid min-h-[480px] grid-cols-1 lg:grid-cols-2 lg:min-h-[600px] xl:min-h-[680px]">
-
-        {/* ── COLUMNA IZQUIERDA (estática) ── */}
         <div className="relative z-10 flex flex-col justify-between px-8 py-10 sm:px-12 lg:px-16 xl:px-20">
-
-          {/* Fechas */}
           <div className="space-y-1">
             <p className="text-xs uppercase tracking-[0.18em] text-white/80 sm:text-sm">
               {hero.deadline}
@@ -49,7 +43,6 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Título + subtítulo */}
           <div className="py-6 lg:py-0">
             <h1
               className="font-anta leading-none text-[clamp(3rem,8vw,6rem)]"
@@ -62,7 +55,6 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Logos */}
           <div>
             <div className="mb-5 flex flex-wrap gap-12">
               <div>
@@ -107,38 +99,35 @@ export function Hero() {
           </div>
         </div>
 
-        {/* ── COLUMNA DERECHA: carrusel de imágenes ── */}
         <div className="relative h-72 w-full lg:h-auto">
           {slides.map((src, i) => (
             <Image
-              key={src}
+              key={`hero-slide-${i}`}
               src={src}
               alt=""
               fill
               priority={i === 0}
-              className="object-contain object-right transition-opacity duration-400"
-              style={{ opacity: i === current && visible ? 1 : 0 }}
+              className={`object-contain object-right transition-opacity duration-700 ease-in-out ${
+                i === current ? "opacity-100" : "pointer-events-none opacity-0"
+              }`}
               sizes="(max-width: 1024px) 100vw, 50vw"
+              aria-hidden={i !== current}
             />
           ))}
 
-          {/* Indicadores */}
           <div className="absolute bottom-4 right-4 z-10 flex gap-2">
             {slides.map((_, i) => (
               <button
                 key={i}
+                type="button"
                 aria-label={`Slide ${i + 1}`}
-                onClick={() => {
-                  setVisible(false);
-                  setTimeout(() => {
-                    setCurrent(i);
-                    setVisible(true);
-                  }, 400);
-                }}
+                aria-current={i === current ? "true" : undefined}
+                onClick={() => goToSlide(i)}
                 className="h-1.5 rounded-full transition-all duration-300"
                 style={{
                   width: i === current ? "24px" : "6px",
-                  backgroundColor: i === current ? "#1f55a0" : "rgba(255,255,255,0.4)",
+                  backgroundColor:
+                    i === current ? "#1f55a0" : "rgba(255,255,255,0.4)",
                 }}
               />
             ))}

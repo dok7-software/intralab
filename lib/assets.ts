@@ -1,7 +1,8 @@
 export const assets = {
   heroSlides: [
-    "/backgrounds/Propuesta IntraLab 22@.png",
+    "/backgrounds/Propuesta IntraLab 22@ carrusel 1.png",
     "/backgrounds/Propuesta IntraLab 22@ carrusel 2.png",
+    "/backgrounds/Propuesta IntraLab 22@ carrusel 3.png",
   ],
   logos: {
     eu: "/logos/logo-union-europea.png",

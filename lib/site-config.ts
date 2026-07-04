@@ -53,4 +53,78 @@ export const siteConfig = {
     community:
       "Al terminar, formas parte de una comunidad que te conecta con empresas, inversores y talento del 22@.",
   },
+  calendar: {
+    title: "Un itinerario pensado para avanzar",
+    milestones: [
+      { date: "24 julio 2026", milestone: "Cierre de candidaturas" },
+      { date: "27 julio 2026", milestone: "Selección de proyectos" },
+      { date: "16 septiembre 2026", milestone: "Kick Off del programa" },
+      {
+        date: "16 diciembre 2026",
+        milestone: "Demo Day ante empresas, mentores e inversores",
+      },
+    ],
+  },
+  applicationForm: {
+    title: "Formulario de Admisión de Proyectos – Convocatoria 2026",
+    notice:
+      "Debido a la alta personalización de las mentorías y los requisitos de cofinanciación pública, todos los campos son obligatorios.",
+    sections: {
+      fse: "Datos FSE+",
+      corporate: "Enfoque corporativo",
+      clauses: "Cláusulas",
+    },
+    fields: {
+      fse: [
+        "Nombre y apellidos",
+        "NIF-NIE",
+        "Género",
+        "Edad",
+        "Población",
+        "Comarca",
+        "Nivel de formación",
+        "Situación laboral",
+      ],
+      corporate: [
+        "Email",
+        "Teléfono",
+        "Empresa",
+        "Cargo",
+        "Descripción del reto a resolver",
+      ],
+      clauses: [
+        "Política de privacidad (RGPD)",
+        "Consentimiento tratamiento de datos FSE+",
+      ],
+    },
+    cta: "ENVIAR MI CANDIDATURA AL COMITÉ DE SELECCIÓN ➔",
+  },
+  faq: [
+    {
+      question: "¿Tiene coste?",
+      answer:
+        "No. El programa está totalmente subvencionado para los participantes seleccionados.",
+    },
+    {
+      question: "¿Qué compromiso requiere?",
+      answer:
+        "Asistencia activa a las 100h de formación y las 80h de mentoría.",
+    },
+    {
+      question: "¿Necesito una idea desarrollada?",
+      answer:
+        "No. Solo un reto real dentro de tu empresa; nosotros te ayudamos a convertirlo en solución.",
+    },
+    {
+      question: "¿Qué pasa después del Demo Day?",
+      answer:
+        "Pasas a formar parte de la red de comisiones sectoriales de 22@Network, para escalar tu proyecto o levantar capital.",
+    },
+  ],
+  institutionalFooter: {
+    legalText:
+      "Este programa público de preaceleración de intraemprendimiento tecnológico está enfocado en la obtención de soluciones innovadoras y resultados de mercado escalables, impulsando la competitividad y la capacidad de adaptación del tejido empresarial. Esta operación cuenta con la ayuda financiera directa de las instituciones cofinanciadoras.",
+    fundingText:
+      "Subvencionat pel Departament d'Empresa i Treball i amb el cofinançament del Fons Social Europeu Plus",
+  },
 } as const;
