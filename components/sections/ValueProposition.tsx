@@ -12,7 +12,7 @@ export function ValueProposition() {
       <div className="mx-auto max-w-4xl">
         <div
           className="mb-8 h-1 w-16 rounded-full"
-          style={{ backgroundColor: "#edf060" }}
+          style={{ backgroundColor: "#1f55a0" }}
         />
 
         <h2 className="font-anta text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
@@ -29,7 +29,7 @@ export function ValueProposition() {
         <a
           href="#formulario"
           className="mt-10 inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-semibold transition-opacity hover:opacity-90"
-          style={{ backgroundColor: "#edf060", color: "#171219" }}
+          style={{ backgroundColor: "#1f55a0", color: "#ffffff" }}
         >
           {valueProposition.cta}
         </a>

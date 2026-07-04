@@ -12,7 +12,7 @@ export function Calendar() {
       <div className="mx-auto max-w-4xl">
         <div
           className="mb-8 h-1 w-16 rounded-full"
-          style={{ backgroundColor: "#edf060" }}
+          style={{ backgroundColor: "#1f55a0" }}
         />
 
         <h2 className="font-anta text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
@@ -46,7 +46,7 @@ export function Calendar() {
               >
                 <p
                   className="text-sm font-semibold sm:text-base"
-                  style={{ color: "#edf060" }}
+                  style={{ color: "#1f55a0" }}
                 >
                   {item.date}
                 </p>

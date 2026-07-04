@@ -12,7 +12,7 @@ export function FAQ() {
       <div className="mx-auto max-w-3xl">
         <div
           className="mb-8 h-1 w-16 rounded-full"
-          style={{ backgroundColor: "#edf060" }}
+          style={{ backgroundColor: "#1f55a0" }}
         />
 
         <div className="space-y-4">
@@ -26,7 +26,7 @@ export function FAQ() {
                 {item.question}
                 <span
                   className="shrink-0 text-xl transition-transform group-open:rotate-45"
-                  style={{ color: "#edf060" }}
+                  style={{ color: "#1f55a0" }}
                   aria-hidden="true"
                 >
                   +

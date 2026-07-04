@@ -12,7 +12,7 @@ export function ProgramIncludes() {
       <div className="mx-auto max-w-6xl">
         <div
           className="mb-8 h-1 w-16 rounded-full"
-          style={{ backgroundColor: "#edf060" }}
+          style={{ backgroundColor: "#1f55a0" }}
         />
 
         <h2 className="font-anta text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
@@ -34,7 +34,7 @@ export function ProgramIncludes() {
               >
                 <span
                   className="shrink-0 font-anta text-2xl leading-none"
-                  style={{ color: "#edf060" }}
+                  style={{ color: "#1f55a0" }}
                 >
                   {String(index + 1).padStart(2, "0")}
                 </span>

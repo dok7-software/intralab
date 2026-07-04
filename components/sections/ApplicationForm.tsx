@@ -82,7 +82,7 @@ export function ApplicationForm() {
       <div className="mx-auto max-w-3xl">
         <div
           className="mb-8 h-1 w-16 rounded-full"
-          style={{ backgroundColor: "#edf060" }}
+          style={{ backgroundColor: "#1f55a0" }}
         />
 
         <h2 className="font-anta text-2xl leading-tight text-white sm:text-3xl lg:text-4xl">
@@ -97,7 +97,7 @@ export function ApplicationForm() {
           <fieldset className="space-y-6">
             <legend
               className="mb-6 text-lg font-semibold"
-              style={{ color: "#edf060" }}
+              style={{ color: "#1f55a0" }}
             >
               {applicationForm.sections.fse}:
             </legend>
@@ -119,7 +119,7 @@ export function ApplicationForm() {
           <fieldset className="space-y-6">
             <legend
               className="mb-6 text-lg font-semibold"
-              style={{ color: "#edf060" }}
+              style={{ color: "#1f55a0" }}
             >
               {applicationForm.sections.corporate}:
             </legend>
@@ -141,7 +141,7 @@ export function ApplicationForm() {
           <fieldset className="space-y-4">
             <legend
               className="mb-6 text-lg font-semibold"
-              style={{ color: "#edf060" }}
+              style={{ color: "#1f55a0" }}
             >
               {applicationForm.sections.clauses}:
             </legend>
@@ -174,7 +174,7 @@ export function ApplicationForm() {
           <button
             type="submit"
             className="w-full rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-opacity hover:opacity-90 sm:w-auto"
-            style={{ backgroundColor: "#edf060", color: "#171219" }}
+            style={{ backgroundColor: "#1f55a0", color: "#ffffff" }}
           >
             {applicationForm.cta}
           </button>

@@ -3,7 +3,7 @@
 @theme inline {
   --color-brand-dark: #171219;
   --color-brand-blue: #1f55a0;
-  --color-brand-accent: #edf060;
+  --color-brand-accent: #1f55a0;
   --font-anta: var(--font-anta);
   --font-garet: var(--font-garet);
 }

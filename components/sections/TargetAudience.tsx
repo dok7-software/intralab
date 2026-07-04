@@ -12,7 +12,7 @@ export function TargetAudience() {
       <div className="mx-auto max-w-6xl">
         <div
           className="mb-8 h-1 w-16 rounded-full"
-          style={{ backgroundColor: "#edf060" }}
+          style={{ backgroundColor: "#1f55a0" }}
         />
 
         <h2 className="font-anta text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
@@ -28,7 +28,7 @@ export function TargetAudience() {
             >
               <h3
                 className="text-lg font-semibold leading-snug sm:text-xl"
-                style={{ color: "#edf060" }}
+                style={{ color: "#1f55a0" }}
               >
                 {audience.label}
               </h3>

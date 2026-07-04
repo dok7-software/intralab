@@ -12,7 +12,7 @@ export function FormIntro() {
       <div className="mx-auto max-w-3xl text-center">
         <div
           className="mx-auto mb-8 h-1 w-16 rounded-full"
-          style={{ backgroundColor: "#edf060" }}
+          style={{ backgroundColor: "#1f55a0" }}
         />
 
         <p className="text-lg leading-relaxed text-white/80 sm:text-xl">
@@ -28,7 +28,7 @@ export function FormIntro() {
         <a
           href="#formulario-admision"
           className="mt-10 inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-semibold transition-opacity hover:opacity-90"
-          style={{ backgroundColor: "#edf060", color: "#171219" }}
+          style={{ backgroundColor: "#1f55a0", color: "#ffffff" }}
         >
           {formIntro.cta}
         </a>
