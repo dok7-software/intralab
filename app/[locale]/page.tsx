@@ -28,7 +28,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
   return (
     <>
       <Header />
-      <main className="pt-[4.5rem]">
+      <main className="pt-[3.25rem]">
         <Hero />
         <ValueProposition />
         <TargetAudience />

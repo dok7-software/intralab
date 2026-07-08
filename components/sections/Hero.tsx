@@ -77,7 +77,7 @@ export function Hero() {
 
         <div className="px-6 pt-4 pb-2">
           <h1
-            className="font-anta text-5xl leading-none"
+            className="font-anta text-[clamp(1.75rem,8vw,3rem)] leading-none whitespace-nowrap"
             style={{ color: HERO_ACCENT_ON_DARK }}
           >
             {hero.title}
@@ -144,7 +144,7 @@ export function Hero() {
 
           <div>
             <h1
-              className="font-anta leading-none text-[clamp(3rem,8vw,6rem)]"
+              className="font-anta leading-none whitespace-nowrap text-[clamp(3rem,8vw,6rem)]"
               style={{ color: HERO_ACCENT_ON_DARK }}
             >
               {hero.title}
