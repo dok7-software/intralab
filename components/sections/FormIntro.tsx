@@ -1,13 +1,15 @@
-import { siteConfig } from "@/lib/site-config";
+"use client";
+
+import { useLanguage } from "@/lib/i18n/language-context";
 
 export function FormIntro() {
-  const { formIntro } = siteConfig;
+  const { t } = useLanguage();
+  const { formIntro } = t;
 
   return (
     <section
       id="formulario"
-      className="w-full px-8 py-20 sm:px-12 lg:px-16 xl:px-20"
-      style={{ backgroundColor: "#171219" }}
+      className="w-full bg-white px-8 py-20 sm:px-12 lg:px-16 xl:px-20"
     >
       <div className="mx-auto max-w-3xl text-center">
         <div
@@ -15,14 +17,12 @@ export function FormIntro() {
           style={{ backgroundColor: "#1f55a0" }}
         />
 
-        <p className="text-lg leading-relaxed text-white/80 sm:text-xl">
-          {formIntro.copy.slice(0, formIntro.copy.indexOf("IntraLab 22@"))}
+        <p className="text-lg leading-relaxed text-zinc-600 sm:text-xl">
+          {formIntro.copyBefore}
           <span className="font-semibold" style={{ color: "#1f55a0" }}>
             IntraLab 22@
           </span>
-          {formIntro.copy.slice(
-            formIntro.copy.indexOf("IntraLab 22@") + "IntraLab 22@".length,
-          )}
+          {formIntro.copyAfter}
         </p>
 
         <a

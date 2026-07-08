@@ -4,6 +4,8 @@
   --color-brand-dark: #171219;
   --color-brand-blue: #1f55a0;
   --color-brand-accent: #1f55a0;
+  --color-brand-light: #ffffff;
+  --color-brand-surface: #f5f6f8;
   --font-anta: var(--font-anta);
   --font-garet: var(--font-garet);
 }
@@ -11,8 +13,8 @@
 html,
 body {
   min-height: 100%;
-  background-color: #171219;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #171219;
 }
 
 body {
