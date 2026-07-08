@@ -10,9 +10,15 @@ export function InstitutionalFooter() {
   const { institutionalFooter } = t;
 
   return (
-    <footer className="w-full border-t border-zinc-200 bg-brand-surface px-8 py-16 sm:px-12 lg:px-16 xl:px-20">
+    <footer
+      className="institutional-footer w-full border-t border-white/10 px-8 py-16 sm:px-12 lg:px-16 xl:px-20"
+      style={{ backgroundColor: "#171219", color: "#ffffff" }}
+    >
       <div className="mx-auto max-w-5xl text-center">
-        <p className="text-sm leading-relaxed text-white sm:text-base">
+        <p
+          className="text-sm leading-relaxed sm:text-base"
+          style={{ color: "#ffffff" }}
+        >
           {institutionalFooter.legalText}
         </p>
 
@@ -40,7 +46,10 @@ export function InstitutionalFooter() {
           />
         </div>
 
-        <p className="mt-12 text-center text-xs leading-relaxed text-white sm:text-sm">
+        <p
+          className="mt-12 text-center text-xs leading-relaxed sm:text-sm"
+          style={{ color: "#ffffff" }}
+        >
           {institutionalFooter.fundingText}
         </p>
       </div>
