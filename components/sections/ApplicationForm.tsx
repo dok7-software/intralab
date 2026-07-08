@@ -1,45 +1,27 @@
 "use client";
 
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 
-import { siteConfig } from "@/lib/site-config";
+import { useLanguage } from "@/lib/i18n/language-context";
 
 const inputClassName =
-  "w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none transition-colors focus:border-[#1f55a0] focus:ring-1 focus:ring-[#1f55a0]";
+  "w-full rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none transition-colors focus:border-[#1f55a0] focus:ring-1 focus:ring-[#1f55a0]";
 
-const labelClassName = "mb-2 block text-sm font-medium text-white/80";
-
-const fieldIds: Record<string, string> = {
-  "Nombre y apellidos": "nombre-apellidos",
-  "NIF-NIE": "nif-nie",
-  Género: "genero",
-  Edad: "edad",
-  Población: "poblacion",
-  Comarca: "comarca",
-  "Nivel de formación": "nivel-formacion",
-  "Situación laboral": "situacion-laboral",
-  Email: "email",
-  Teléfono: "telefono",
-  Empresa: "empresa",
-  Cargo: "cargo",
-  "Descripción del reto a resolver": "descripcion-reto",
-  "Política de privacidad (RGPD)": "privacidad-rgpd",
-  "Consentimiento tratamiento de datos FSE+": "consentimiento-fse",
-};
+const labelClassName = "mb-2 block text-center text-sm font-medium text-zinc-700";
 
 function Field({
+  id,
   label,
   type = "text",
   as = "input",
   rows,
 }: {
+  id: string;
   label: string;
   type?: string;
   as?: "input" | "textarea";
   rows?: number;
 }) {
-  const id = fieldIds[label] ?? label;
-
   return (
     <div>
       <label htmlFor={id} className={labelClassName}>
@@ -67,117 +49,160 @@ function Field({
 }
 
 export function ApplicationForm() {
-  const { applicationForm } = siteConfig;
+  const { t } = useLanguage();
+  const { applicationForm } = t;
+  const { fields } = applicationForm;
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    if (isSubmitting) return;
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      companyName: formData.get("nombre-empresa") as string,
+      sector: formData.get("sector") as string,
+      address: formData.get("direccion") as string,
+      partnerStatus: formData.get("empresa-socia") as string,
+      contactName: formData.get("persona-contacto") as string,
+      role: formData.get("cargo") as string,
+      email: formData.get("mail") as string,
+      phone: formData.get("telefono") as string,
+    };
+
+    setIsSubmitting(true);
+    setStatus("idle");
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Request failed");
+        setStatus("success");
+        form.reset();
+      })
+      .catch(() => {
+        setStatus("error");
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   }
 
   return (
     <section
       id="formulario-admision"
-      className="w-full px-8 py-20 sm:px-12 lg:px-16 xl:px-20"
-      style={{ backgroundColor: "#171219" }}
+      className="w-full bg-white px-8 py-20 sm:px-12 lg:px-16 xl:px-20"
     >
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-3xl text-center">
         <div
-          className="mb-8 h-1 w-16 rounded-full"
+          className="mx-auto mb-8 h-1 w-16 rounded-full"
           style={{ backgroundColor: "#1f55a0" }}
         />
 
-        <h2 className="font-anta text-2xl leading-tight text-white sm:text-3xl lg:text-4xl">
+        <h2 className="font-anta text-2xl leading-tight text-[#5f93e6] sm:text-3xl lg:text-4xl">
           {applicationForm.title}
         </h2>
 
-        <p className="mt-6 text-base leading-relaxed text-white/75 sm:text-lg">
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-600 sm:text-lg">
           {applicationForm.notice}
         </p>
 
-        <form onSubmit={handleSubmit} className="mt-12 space-y-12">
-          <fieldset className="space-y-6">
-            <legend
-              className="mb-6 text-lg font-semibold"
-              style={{ color: "#1f55a0" }}
-            >
-              {applicationForm.sections.fse}:
-            </legend>
-
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="sm:col-span-2">
-                <Field label="Nombre y apellidos" />
-              </div>
-              <Field label="NIF-NIE" />
-              <Field label="Género" />
-              <Field label="Edad" type="number" />
-              <Field label="Población" />
-              <Field label="Comarca" />
-              <Field label="Nivel de formación" />
-              <Field label="Situación laboral" />
+        <form onSubmit={handleSubmit} className="mt-12 space-y-8 text-left">
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div className="sm:col-span-2">
+              <Field id="nombre-empresa" label={fields.companyName} />
             </div>
-          </fieldset>
 
-          <fieldset className="space-y-6">
-            <legend
-              className="mb-6 text-lg font-semibold"
-              style={{ color: "#1f55a0" }}
-            >
-              {applicationForm.sections.corporate}:
-            </legend>
-
-            <div className="grid gap-6 sm:grid-cols-2">
-              <Field label="Email" type="email" />
-              <Field label="Teléfono" type="tel" />
-              <Field label="Empresa" />
-              <Field label="Cargo" />
-              <div className="sm:col-span-2">
-                <Field
-                  label="Descripción del reto a resolver"
-                  as="textarea"
-                />
+            <fieldset className="sm:col-span-2">
+              <legend className={labelClassName}>{fields.sector}</legend>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {Object.entries(fields.sectors).map(([value, label]) => (
+                  <label
+                    key={value}
+                    className="flex cursor-pointer items-center gap-3 rounded-xl border border-zinc-200 bg-brand-surface px-4 py-3 text-sm text-zinc-700"
+                  >
+                    <input
+                      type="radio"
+                      name="sector"
+                      value={value}
+                      required
+                      className="h-4 w-4 accent-[#1f55a0]"
+                    />
+                    <span>{label}</span>
+                  </label>
+                ))}
               </div>
+            </fieldset>
+
+            <div className="sm:col-span-2">
+              <Field id="direccion" label={fields.address} />
             </div>
-          </fieldset>
 
-          <fieldset className="space-y-4">
-            <legend
-              className="mb-6 text-lg font-semibold"
-              style={{ color: "#1f55a0" }}
-            >
-              {applicationForm.sections.clauses}:
-            </legend>
-
-            {applicationForm.fields.clauses.map((clause) => {
-              const id = fieldIds[clause] ?? clause;
-
-              return (
-                <label
-                  key={clause}
-                  htmlFor={id}
-                  className="flex cursor-pointer items-start gap-3 rounded-xl border border-white/10 p-4"
-                  style={{ backgroundColor: "rgba(31, 85, 160, 0.08)" }}
-                >
+            <fieldset className="sm:col-span-2">
+              <legend className={labelClassName}>{fields.partnerStatus}</legend>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-zinc-200 bg-brand-surface px-4 py-3 text-sm text-zinc-700">
                   <input
-                    id={id}
-                    name={id}
-                    type="checkbox"
+                    type="radio"
+                    name="empresa-socia"
+                    value="si"
                     required
-                    className="mt-1 h-4 w-4 shrink-0 accent-[#1f55a0]"
+                    className="h-4 w-4 accent-[#1f55a0]"
                   />
-                  <span className="text-sm text-white/80 sm:text-base">
-                    {clause}
-                  </span>
+                  <span>{fields.partnerYes}</span>
                 </label>
-              );
-            })}
-          </fieldset>
+                <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-zinc-200 bg-brand-surface px-4 py-3 text-sm text-zinc-700">
+                  <input
+                    type="radio"
+                    name="empresa-socia"
+                    value="no"
+                    required
+                    className="h-4 w-4 accent-[#1f55a0]"
+                  />
+                  <span>{fields.partnerNo}</span>
+                </label>
+              </div>
+            </fieldset>
 
-          <button
-            type="submit"
-            className="w-full rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-opacity hover:opacity-90 sm:w-auto"
-            style={{ backgroundColor: "#1f55a0", color: "#ffffff" }}
-          >
-            {applicationForm.cta}
-          </button>
+            <div className="sm:col-span-2">
+              <Field id="persona-contacto" label={fields.contactName} />
+            </div>
+            <Field id="cargo" label={fields.role} />
+            <Field id="mail" label={fields.email} type="email" />
+            <Field id="telefono" label={fields.phone} type="tel" />
+          </div>
+
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+              style={{ backgroundColor: "#1f55a0", color: "#ffffff" }}
+            >
+              {isSubmitting ? "Enviando..." : applicationForm.cta}
+            </button>
+          </div>
+
+          {status === "success" && (
+            <p className="mt-4 text-center text-sm text-emerald-600">
+              Hemos recibido tu inscripción. Nos pondremos en contacto contigo
+              en breve.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="mt-4 text-center text-sm text-red-600">
+              Ha ocurrido un error al enviar el formulario. Por favor, inténtalo
+              de nuevo más tarde.
+            </p>
+          )}
         </form>
       </div>
     </section>

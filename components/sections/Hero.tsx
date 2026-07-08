@@ -4,12 +4,14 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
 import { assets } from "@/lib/assets";
-import { siteConfig } from "@/lib/site-config";
+import { useLanguage } from "@/lib/i18n/language-context";
 
 const INTERVAL_MS = 4000;
+const HERO_ACCENT_ON_DARK = "#5f93e6";
 
 export function Hero() {
-  const { hero } = siteConfig;
+  const { t } = useLanguage();
+  const { hero, header } = t;
   const slides = assets.heroSlides;
 
   const [current, setCurrent] = useState(0);
@@ -31,14 +33,12 @@ export function Hero() {
       className="relative w-full overflow-hidden text-white"
       style={{ backgroundColor: "#171219" }}
     >
-      {/* ── MOBILE: stack vertical ── */}
       <div className="flex flex-col lg:hidden">
-        {/* 1. Logos */}
         <div className="px-6 pt-8 pb-4">
           <div className="grid grid-cols-2 items-start gap-4">
             <div>
               <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white/70">
-                Programa de:
+                {header.programOf}
               </p>
               <Image
                 src={assets.logos.network22}
@@ -50,7 +50,7 @@ export function Hero() {
             </div>
             <div>
               <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white/70">
-                Finançat per:
+                {header.fundedBy}
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 <Image
@@ -75,11 +75,10 @@ export function Hero() {
           </p>
         </div>
 
-        {/* 2. Título + subtítulo */}
         <div className="px-6 pt-4 pb-2">
           <h1
             className="font-anta text-5xl leading-none"
-            style={{ color: "#1f55a0" }}
+            style={{ color: HERO_ACCENT_ON_DARK }}
           >
             {hero.title}
           </h1>
@@ -88,8 +87,7 @@ export function Hero() {
           </p>
         </div>
 
-        {/* 3. Fechas */}
-        <div className="px-6 pt-4 pb-2 space-y-1">
+        <div className="space-y-1 px-6 pt-4 pb-2">
           <p className="text-xs uppercase tracking-[0.18em] text-white/80">
             {hero.deadline}
           </p>
@@ -98,7 +96,6 @@ export function Hero() {
           </p>
         </div>
 
-        {/* 4. Imagen carrusel */}
         <div className="relative h-80 w-full">
           {slides.map((src, i) => (
             <Image
@@ -119,7 +116,7 @@ export function Hero() {
               <button
                 key={i}
                 type="button"
-                aria-label={`Slide ${i + 1}`}
+                aria-label={`${hero.slideLabel} ${i + 1}`}
                 aria-current={i === current ? "true" : undefined}
                 onClick={() => goToSlide(i)}
                 className="h-1.5 rounded-full transition-all duration-300"
@@ -134,11 +131,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* ── DESKTOP: dos columnas ── */}
       <div className="hidden lg:grid lg:grid-cols-2 lg:min-h-[600px] xl:min-h-[680px]">
-        {/* Columna izquierda */}
         <div className="flex flex-col justify-between px-16 py-16 xl:px-20">
-          {/* Fechas */}
           <div className="space-y-1">
             <p className="text-sm uppercase tracking-[0.18em] text-white/80">
               {hero.deadline}
@@ -148,11 +142,10 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Título + subtítulo */}
           <div>
             <h1
               className="font-anta leading-none text-[clamp(3rem,8vw,6rem)]"
-              style={{ color: "#1f55a0" }}
+              style={{ color: HERO_ACCENT_ON_DARK }}
             >
               {hero.title}
             </h1>
@@ -161,12 +154,11 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Logos */}
           <div>
             <div className="mb-5 flex flex-wrap gap-12">
               <div>
                 <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-white/70">
-                  Finançat per:
+                  {header.fundedBy}
                 </p>
                 <div className="flex flex-wrap items-center gap-4">
                   <Image
@@ -187,7 +179,7 @@ export function Hero() {
               </div>
               <div>
                 <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-white/70">
-                  Programa de:
+                  {header.programOf}
                 </p>
                 <Image
                   src={assets.logos.network22}
@@ -204,7 +196,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Columna derecha: carrusel */}
         <div className="relative">
           {slides.map((src, i) => (
             <Image
@@ -225,7 +216,7 @@ export function Hero() {
               <button
                 key={i}
                 type="button"
-                aria-label={`Slide ${i + 1}`}
+                aria-label={`${hero.slideLabel} ${i + 1}`}
                 aria-current={i === current ? "true" : undefined}
                 onClick={() => goToSlide(i)}
                 className="h-1.5 rounded-full transition-all duration-300"
