@@ -24,8 +24,8 @@ export const translations = {
       slideLabel: "Diapositiva",
     },
     hook: {
-      title:
-        "¿Y si la próxima gran innovación de tu empresa ya existiera?",
+      titleLine1: "¿Y si la próxima gran innovación",
+      titleLine2: "de tu empresa ya existiera?",
       paragraphs: [
         "Todos los días, dentro de las empresas nacen ideas con potencial para mejorar procesos, desarrollar nuevos productos, optimizar operaciones o responder a las nuevas necesidades del mercado.",
         "Sin embargo, muchas de ellas nunca llegan a convertirse en proyectos reales.",
@@ -89,7 +89,8 @@ export const translations = {
       ],
     },
     companyBenefits: {
-      title: "¿Qué obtiene tu empresa?",
+      titleLine1: "¿Qué obtiene",
+      titleLine2: "tu empresa?",
       items: [
         {
           title: "Innovación aplicada",
@@ -120,7 +121,8 @@ export const translations = {
       imageAlt: "Edificio del distrito tecnológico 22@ Barcelona al atardecer",
     },
     teamBenefits: {
-      title: "¿Qué obtiene tu equipo?",
+      titleLine1: "¿Qué obtiene",
+      titleLine2: "tu equipo?",
       items: [
         "Nuevas competencias",
         "Visión estratégica",
@@ -151,6 +153,10 @@ export const translations = {
       primaryCta: "Enviar candidatura",
       secondaryCta: "secretariatecnica@22network.net",
       secondaryHref: "mailto:secretariatecnica@22network.net",
+      fundingDisclaimerLine1:
+        "Financiado por el Departamento de Empresa y Trabajo de la Generalitat",
+      fundingDisclaimerLine2:
+        "de Catalunya y cofinanciado por el Fondo Social Europeo Plus",
     },
     applicationForm: {
       title: "Formulario de Admisión de Proyectos – Convocatoria 2026",
@@ -235,7 +241,8 @@ export const translations = {
       slideLabel: "Diapositiva",
     },
     hook: {
-      title: "I si la propera gran innovació de la teva empresa ja existís?",
+      titleLine1: "I si la propera gran innovació",
+      titleLine2: "de la teva empresa ja existís?",
       paragraphs: [
         "Cada dia, dins de les empreses neixen idees amb potencial per millorar processos, desenvolupar nous productes, optimitzar operacions o respondre a les noves necessitats del mercat.",
         "Tot i això, moltes d'elles mai arriben a convertir-se en projectes reals.",
@@ -300,7 +307,8 @@ export const translations = {
       ],
     },
     companyBenefits: {
-      title: "Què obté la teva empresa?",
+      titleLine1: "Què obté",
+      titleLine2: "la teva empresa?",
       items: [
         {
           title: "Innovació aplicada",
@@ -331,7 +339,8 @@ export const translations = {
       imageAlt: "Edifici del districte tecnològic 22@ Barcelona al capvespre",
     },
     teamBenefits: {
-      title: "Què obté el teu equip?",
+      titleLine1: "Què obté",
+      titleLine2: "el teu equip?",
       items: [
         "Noves competències",
         "Visió estratègica",
@@ -362,6 +371,10 @@ export const translations = {
       primaryCta: "Enviar candidatura",
       secondaryCta: "secretariatecnica@22network.net",
       secondaryHref: "mailto:secretariatecnica@22network.net",
+      fundingDisclaimerLine1:
+        "Finançat pel Departament d'Empresa i Treball de la Generalitat",
+      fundingDisclaimerLine2:
+        "de Catalunya i cofinançat pel Fons Social Europeu Plus",
     },
     applicationForm: {
       title: "Formulari d'Admissió de Projectes – Convocatòria 2026",

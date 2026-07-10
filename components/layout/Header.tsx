@@ -1,9 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
-import { assets } from "@/lib/assets";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { Locale } from "@/lib/i18n/translations";
 
@@ -91,13 +89,6 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center justify-end gap-4 lg:col-start-3 lg:flex">
-          <Image
-            src={assets.logos.network22}
-            alt="22@Network Barcelona"
-            width={110}
-            height={26}
-            className="hidden h-6 w-auto object-contain opacity-90 xl:block"
-          />
           <LanguageToggle />
           <a
             href="#formulario-admision"

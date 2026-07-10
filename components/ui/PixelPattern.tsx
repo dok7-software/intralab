@@ -1,3 +1,9 @@
+import {
+  PIXEL_BRAND_COLOR,
+  PIXEL_CELL_SIZE,
+  getPixelStep,
+} from "./pixel-pattern-config";
+
 type PixelPatternVariant = "corner" | "band" | "cluster" | "edgeBottomRight";
 
 type PixelCell = {
@@ -82,37 +88,35 @@ const VARIANT_GRID: Record<PixelPatternVariant, { cols: number; rows: number }> 
 type PixelPatternProps = {
   variant?: PixelPatternVariant;
   className?: string;
-  color?: string;
-  cellSize?: number;
-  gap?: number;
 };
 
 export function PixelPattern({
   variant = "corner",
   className = "",
-  color = "#1f55a0",
-  cellSize = 10,
-  gap = 6,
 }: PixelPatternProps) {
   const cells = VARIANT_CELLS[variant];
   const { cols, rows } = VARIANT_GRID[variant];
-  const step = cellSize + gap;
+  const step = getPixelStep();
+  const width = cols * step;
+  const height = rows * step;
 
   return (
     <svg
-      viewBox={`0 0 ${cols * step} ${rows * step}`}
-      className={className}
+      viewBox={`0 0 ${width} ${height}`}
+      className={`shrink-0 ${className}`}
       aria-hidden="true"
-      style={{ width: cols * step, height: rows * step }}
+      width={width}
+      height={height}
+      style={{ width, height, minWidth: width, minHeight: height }}
     >
       {cells.map((cell, index) => (
         <rect
           key={`${cell.x}-${cell.y}-${index}`}
           x={cell.x * step}
           y={cell.y * step}
-          width={cellSize * cell.s}
-          height={cellSize * cell.s}
-          fill={color}
+          width={PIXEL_CELL_SIZE * cell.s}
+          height={PIXEL_CELL_SIZE * cell.s}
+          fill={PIXEL_BRAND_COLOR}
         />
       ))}
     </svg>

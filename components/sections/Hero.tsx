@@ -5,7 +5,6 @@ import { useCallback, useEffect, useState } from "react";
 
 import { assets } from "@/lib/assets";
 import { useLanguage } from "@/lib/i18n/language-context";
-import { PixelPattern } from "@/components/ui/PixelPattern";
 
 const INTERVAL_MS = 4000;
 const BRAND_BLUE = "#1f55a0";
@@ -34,11 +33,6 @@ export function Hero() {
       className="relative w-full overflow-hidden text-white"
       style={{ backgroundColor: "#171219" }}
     >
-      <PixelPattern
-        variant="corner"
-        className="pointer-events-none absolute -top-2 left-[38%] hidden opacity-80 lg:block"
-      />
-
       <div className="flex flex-col lg:hidden">
         <div className="px-6 pt-8 pb-2">
           <h1
@@ -154,7 +148,7 @@ export function Hero() {
           </div>
 
           <div>
-            <div className="mb-5 flex flex-wrap gap-12">
+            <div className="mb-5 space-y-6">
               <div>
                 <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-white/70">
                   {hero.coordinatesLabel}

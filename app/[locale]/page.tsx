@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 
 import { Header } from "@/components/layout/Header";
-import { InstitutionalFooter } from "@/components/layout/InstitutionalFooter";
+// import { InstitutionalFooter } from "@/components/layout/InstitutionalFooter";
 import { ApplicationForm } from "@/components/sections/ApplicationForm";
 import { Calendar } from "@/components/sections/Calendar";
 import { CompanyBenefits } from "@/components/sections/CompanyBenefits";
-import { FAQ } from "@/components/sections/FAQ";
+// import { FAQ } from "@/components/sections/FAQ";
 import { FormIntro } from "@/components/sections/FormIntro";
 import { Hero } from "@/components/sections/Hero";
 import { Hook } from "@/components/sections/Hook";
@@ -42,9 +42,9 @@ export default async function LocalePage({ params }: LocalePageProps) {
         <Calendar />
         <FormIntro />
         <ApplicationForm />
-        <FAQ />
+        {/* <FAQ /> */}
       </main>
-      <InstitutionalFooter />
+      {/* <InstitutionalFooter /> */}
     </>
   );
 }

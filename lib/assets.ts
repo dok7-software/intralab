@@ -21,6 +21,13 @@ export const assets = {
       height: 635,
     },
   },
+  programIncludes: {
+    formacion: "/imagenes/programa/formacion.png",
+    mentoria: "/imagenes/programa/mentoria.png",
+    retoReal: "/imagenes/programa/reto-real.png",
+    ecosistema22: "/imagenes/programa/ecosistema-22.png",
+    demoDay: "/imagenes/programa/demo-day.png",
+  },
   logos: {
     eu: "/logos/logo-union-europea.png",
     generalitat: "/logos/logo-generalitat.png",

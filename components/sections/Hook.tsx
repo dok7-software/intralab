@@ -9,12 +9,13 @@ export function Hook() {
 
   return (
     <section
-      className="relative w-full overflow-hidden px-8 py-20 text-white sm:px-12 lg:px-16 xl:px-20"
+      className="relative w-full overflow-hidden py-20 text-white"
       style={{ backgroundColor: "#171219" }}
     >
-      <div className="mx-auto max-w-4xl text-center">
-        <h2 className="font-anta text-2xl leading-tight sm:text-3xl lg:text-4xl">
-          {hook.title}
+      <div className="mx-auto max-w-4xl px-8 text-center sm:px-12 lg:px-16 xl:px-20">
+        <h2 className="text-2xl leading-tight sm:text-3xl lg:text-4xl">
+          <span className="block">{hook.titleLine1}</span>
+          <span className="block">{hook.titleLine2}</span>
         </h2>
 
         <div className="mx-auto mt-10 max-w-2xl space-y-4 text-base leading-relaxed text-white/80 sm:text-lg">
@@ -32,10 +33,13 @@ export function Hook() {
         </p>
       </div>
 
-      <div className="mx-auto mt-16 flex max-w-4xl items-center justify-between gap-6 opacity-70">
-        <PixelPattern variant="band" cellSize={8} gap={5} className="hidden sm:block" />
-        <PixelPattern variant="band" cellSize={8} gap={5} className="hidden sm:block" />
-        <PixelPattern variant="band" cellSize={8} gap={5} className="hidden sm:block" />
+      <div
+        className="mt-16 hidden w-full items-center justify-evenly opacity-70 sm:flex"
+        aria-hidden="true"
+      >
+        {Array.from({ length: 5 }, (_, index) => (
+          <PixelPattern key={index} variant="band" />
+        ))}
       </div>
     </section>
   );

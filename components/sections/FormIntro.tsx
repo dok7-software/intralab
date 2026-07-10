@@ -16,12 +16,12 @@ export function FormIntro() {
       className="relative w-full overflow-hidden px-8 py-20 text-center text-white sm:px-12 lg:px-16 xl:px-20"
       style={{ backgroundColor: "#171219" }}
     >
-      <div className="mx-auto max-w-3xl">
-        <h2 className="font-anta text-3xl leading-tight sm:text-4xl lg:text-5xl">
+      <div className="mx-auto max-w-5xl">
+        <h2 className="text-3xl leading-tight sm:text-4xl lg:text-5xl">
           {ctaFinal.title}
         </h2>
 
-        <p className="mt-6 text-base leading-relaxed text-white/80 sm:text-lg">
+        <p className="mt-6 text-[calc(2rem-4pt)] leading-snug whitespace-nowrap text-white/80 sm:text-[calc(2.25rem-4pt)]">
           {ctaFinal.subtitle}
         </p>
 
@@ -41,7 +41,7 @@ export function FormIntro() {
           </a>
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+        <div className="mt-14 flex flex-wrap items-start justify-center gap-x-12 gap-y-6">
           <div>
             <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-white/60">
               {header.programOf}
@@ -54,11 +54,11 @@ export function FormIntro() {
               className="h-8 w-auto object-contain"
             />
           </div>
-          <div>
+          <div className="text-left">
             <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-white/60">
               {header.fundedBy}
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-wrap items-center justify-start gap-4">
               <Image
                 src={assets.logos.eu}
                 alt="Cofinançat per la Unió Europea"
@@ -74,14 +74,19 @@ export function FormIntro() {
                 className="h-8 w-auto object-contain"
               />
             </div>
+            <p className="mt-3 max-w-xs text-[10px] italic leading-snug text-white sm:max-w-sm sm:text-[11px]">
+              {ctaFinal.fundingDisclaimerLine1}
+              <br />
+              {ctaFinal.fundingDisclaimerLine2}
+            </p>
           </div>
         </div>
       </div>
 
       <div className="mx-auto mt-16 flex max-w-4xl items-center justify-between opacity-60">
-        <PixelPattern variant="band" cellSize={8} gap={5} className="hidden sm:block" />
-        <PixelPattern variant="band" cellSize={8} gap={5} className="hidden sm:block" />
-        <PixelPattern variant="band" cellSize={8} gap={5} className="hidden sm:block" />
+        <PixelPattern variant="band" className="hidden sm:block" />
+        <PixelPattern variant="band" className="hidden sm:block" />
+        <PixelPattern variant="band" className="hidden sm:block" />
       </div>
     </section>
   );
