@@ -1,4 +1,4 @@
 export const siteConfig = {
   name: "IntraLab 22@",
-  url: "https://intralab22.com",
+  url: "https://intralab.cat",
 } as const;

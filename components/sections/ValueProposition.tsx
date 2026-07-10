@@ -1,40 +1,46 @@
 "use client";
 
 import { useLanguage } from "@/lib/i18n/language-context";
+import { PixelPattern } from "@/components/ui/PixelPattern";
 
 export function ValueProposition() {
   const { t } = useLanguage();
-  const { valueProposition } = t;
+  const { whatIsIntralab } = t;
 
   return (
     <section
-      id="propuesta"
-      className="w-full bg-white px-8 py-20 sm:px-12 lg:px-16 xl:px-20"
+      id="que-es"
+      className="relative w-full overflow-hidden px-8 py-20 text-white sm:px-12 lg:px-16 xl:px-20"
+      style={{ backgroundColor: "#171219" }}
     >
-      <div className="mx-auto max-w-4xl text-center">
-        <div
-          className="mx-auto mb-8 h-1 w-16 rounded-full"
-          style={{ backgroundColor: "#1f55a0" }}
-        />
+      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.6fr_1fr] lg:items-center">
+        <div className="max-w-2xl">
+          <h2 className="font-anta text-3xl leading-tight sm:text-4xl lg:text-5xl">
+            {whatIsIntralab.title}
+          </h2>
 
-        <h2 className="font-anta text-3xl leading-tight text-[#5f93e6] sm:text-4xl lg:text-5xl">
-          {valueProposition.title}
-        </h2>
+          <div className="mt-8 space-y-5 text-base leading-relaxed text-white/80 sm:text-lg">
+            {whatIsIntralab.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
 
-        <p className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-zinc-600 sm:text-lg lg:text-xl">
-          <span className="font-semibold" style={{ color: "#1f55a0" }}>
-            IntraLab 22@
-          </span>
-          {valueProposition.copy}
-        </p>
+          <p className="mt-8 text-lg leading-snug text-white/90 sm:text-xl">
+            {whatIsIntralab.highlightBefore}
+          </p>
+          <p className="mt-2 text-lg font-bold leading-snug sm:text-xl">
+            {whatIsIntralab.highlightAfter}
+          </p>
+        </div>
 
-        <a
-          href="#formulario-admision"
-          className="mt-10 inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-semibold transition-opacity hover:opacity-90"
-          style={{ backgroundColor: "#1f55a0", color: "#ffffff" }}
-        >
-          {valueProposition.cta}
-        </a>
+        <div className="hidden justify-end lg:flex">
+          <PixelPattern
+            variant="corner"
+            cellSize={11}
+            gap={7}
+            className="opacity-90"
+          />
+        </div>
       </div>
     </section>
   );

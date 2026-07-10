@@ -3,46 +3,78 @@
 import { useLanguage } from "@/lib/i18n/language-context";
 
 function BlockIcon({ index }: { index: number }) {
-  const iconClassName = "h-5 w-5 text-[#1f55a0]";
+  const iconClassName = "h-7 w-7 text-white";
 
   if (index === 0) {
+    // Training: head with a gear, matching the "formación" pictogram.
     return (
       <svg viewBox="0 0 24 24" className={iconClassName} aria-hidden="true">
         <path
-          d="M4 7h16M4 12h10M4 17h7"
+          d="M9 20v-2a4 4 0 0 1 4-4h0a4 4 0 0 1 4 4v2"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.8"
+          strokeWidth="1.6"
           strokeLinecap="round"
         />
-        <circle cx="17.5" cy="16.5" r="2.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        <circle cx="13" cy="8" r="4" fill="none" stroke="currentColor" strokeWidth="1.6" />
+        <path
+          d="M9 8H6.5a2 2 0 0 0 0 4"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+        />
+        <circle cx="13" cy="8" r="1.1" fill="currentColor" />
       </svg>
     );
   }
 
   if (index === 1) {
+    // Mentoring: lightbulb, matching the "mentoría" pictogram.
     return (
       <svg viewBox="0 0 24 24" className={iconClassName} aria-hidden="true">
-        <circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" strokeWidth="1.8" />
         <path
-          d="M20 20l-4.2-4.2"
+          d="M12 3a5.5 5.5 0 0 0-3 10.1V15h6v-1.9A5.5 5.5 0 0 0 12 3z"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
+          strokeWidth="1.6"
+          strokeLinejoin="round"
         />
+        <path d="M9.5 17.5h5M10 20h4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+        <path d="M12 1.2v1.2M4.8 5l1 .8M19.2 5l-1 .8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
       </svg>
     );
   }
 
   if (index === 2) {
+    // Real challenge: target with flag/arrow.
     return (
       <svg viewBox="0 0 24 24" className={iconClassName} aria-hidden="true">
+        <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" strokeWidth="1.6" />
+        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.6" />
         <path
-          d="M4 18h16M7 18V8h10v10M10 8V5h4v3"
+          d="M12 6V3m0 0h2.5"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.8"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <circle cx="12" cy="12" r="1.2" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  if (index === 3) {
+    // Ecosystem 22@: the district's "@" mark.
+    return (
+      <svg viewBox="0 0 24 24" className={iconClassName} aria-hidden="true">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.6" />
+        <path
+          d="M15.5 12a3.5 3.5 0 1 1-3.5-3.5c1.6 0 2.9 1 3.4 2.4.2.6.1 1.9-.6 2.4-.7.5-1.7.2-1.7-.9v-2.3"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
@@ -50,16 +82,20 @@ function BlockIcon({ index }: { index: number }) {
     );
   }
 
+  // Demo Day: presenter with idea board.
   return (
     <svg viewBox="0 0 24 24" className={iconClassName} aria-hidden="true">
+      <circle cx="8" cy="6.5" r="2" fill="none" stroke="currentColor" strokeWidth="1.6" />
       <path
-        d="M5 16l4-4 3 3 7-7M14 8h5v5"
+        d="M4.5 18v-2a3.5 3.5 0 0 1 3.5-3.5h0a3.5 3.5 0 0 1 3.2 2"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="1.6"
         strokeLinecap="round"
-        strokeLinejoin="round"
       />
+      <rect x="13" y="6" width="8" height="6.5" rx="0.6" fill="none" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M15 15.5l-1.5 3M19 15.5l1.5 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+      <path d="M15 9.5l2-1.5 1.5 1 1.5-2" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -71,67 +107,32 @@ export function ProgramIncludes() {
   return (
     <section
       id="programa"
-      className="w-full bg-white px-8 py-20 sm:px-12 lg:px-16 xl:px-20"
+      className="w-full px-8 py-20 text-white sm:px-12 lg:px-16 xl:px-20"
+      style={{ backgroundColor: "#171219" }}
     >
-      <div className="mx-auto max-w-6xl text-center">
-        <div
-          className="mx-auto mb-8 h-1 w-16 rounded-full"
-          style={{ backgroundColor: "#1f55a0" }}
-        />
-
-        <h2 className="font-anta text-3xl leading-tight text-[#5f93e6] sm:text-4xl lg:text-5xl">
+      <div className="mx-auto max-w-6xl">
+        <h2 className="font-anta text-center text-3xl leading-tight sm:text-4xl lg:text-5xl">
           {programIncludes.title}
         </h2>
 
-        <div className="mt-12">
-          <p className="text-lg font-semibold text-[#5f93e6] sm:text-xl">
-            <span style={{ color: "#1f55a0" }}>
-              {programIncludes.trainingHours}
-            </span>{" "}
-            {programIncludes.trainingHeadline}
-          </p>
-
-          <ol className="mt-8 grid gap-4 sm:grid-cols-2 lg:gap-6">
-            {programIncludes.blocks.map((block, index) => (
-              <li
-                key={block}
-                className="flex flex-col items-center gap-3 rounded-2xl border border-zinc-200 bg-brand-surface p-6 text-center"
+        <ol className="mt-14 grid gap-x-10 gap-y-10 sm:grid-cols-2">
+          {programIncludes.blocks.map((block, index) => (
+            <li key={block.title} className="flex items-start gap-4">
+              <div
+                className="flex h-14 w-14 shrink-0 items-center justify-center"
+                style={{ backgroundColor: "#1f55a0" }}
               >
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-blue/10">
-                    <BlockIcon index={index} />
-                  </div>
-                  <span
-                    className="shrink-0 font-anta text-2xl leading-none"
-                    style={{ color: "#1f55a0" }}
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-                <p className="text-sm leading-relaxed text-zinc-600 sm:text-base">
-                  {block}
+                <BlockIcon index={index} />
+              </div>
+              <div>
+                <h3 className="text-base font-bold leading-snug sm:text-lg">{block.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-white/75 sm:text-base">
+                  {block.description}
                 </p>
-              </li>
-            ))}
-          </ol>
-        </div>
-
-        <div className="mt-10 space-y-6">
-          <p className="mx-auto max-w-3xl text-base leading-relaxed text-zinc-600 sm:text-lg">
-            <span className="font-semibold" style={{ color: "#1f55a0" }}>
-              {programIncludes.mentoringHours}
-            </span>{" "}
-            {programIncludes.mentoring}
-          </p>
-
-          <p className="mx-auto max-w-3xl text-base leading-relaxed text-zinc-600 sm:text-lg">
-            {programIncludes.communityPrefix}{" "}
-            <span className="font-semibold text-brand-dark">
-              {programIncludes.communityHighlight}
-            </span>{" "}
-            {programIncludes.communitySuffix}
-          </p>
-        </div>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

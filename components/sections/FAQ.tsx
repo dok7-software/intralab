@@ -17,7 +17,7 @@ export function FAQ() {
           style={{ backgroundColor: "#1f55a0" }}
         />
 
-        <h2 className="mb-10 font-anta text-3xl leading-tight text-[#5f93e6] sm:text-4xl lg:text-5xl">
+        <h2 className="mb-10 font-anta text-3xl leading-tight text-[#1f55a0] sm:text-4xl lg:text-5xl">
           {faqTitle}
         </h2>
 

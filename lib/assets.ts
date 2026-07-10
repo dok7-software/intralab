@@ -4,6 +4,23 @@ export const assets = {
     "/backgrounds/Propuesta IntraLab 22@ carrusel 2.png",
     "/backgrounds/Propuesta IntraLab 22@ carrusel 3.png",
   ],
+  sections: {
+    targetAudience: {
+      src: "/imagenes/img seccion a quien va dirigido.png",
+      width: 367,
+      height: 635,
+    },
+    companyBenefits: {
+      src: "/imagenes/img seccion que obtiene tu empresa.png",
+      width: 395,
+      height: 637,
+    },
+    teamBenefits: {
+      src: "/imagenes/img seccion que obtiene tu equipo.png",
+      width: 371,
+      height: 635,
+    },
+  },
   logos: {
     eu: "/logos/logo-union-europea.png",
     generalitat: "/logos/logo-generalitat.png",
