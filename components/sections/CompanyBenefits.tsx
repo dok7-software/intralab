@@ -40,12 +40,13 @@ export function CompanyBenefits() {
           </div>
         </div>
 
-        <div className="relative min-h-[22rem] sm:min-h-[28rem] lg:min-h-[38rem]">
+        <div className="relative h-full min-h-[20rem] aspect-[1652/1959] sm:min-h-[24rem] lg:aspect-auto lg:min-h-[38rem]">
           <Image
             src={image.src}
             alt={companyBenefits.imageAlt}
-            fill
-            className="object-cover object-center"
+            width={image.width}
+            height={image.height}
+            className="h-full w-full object-contain object-center"
             sizes="(min-width: 1024px) 50vw, 100vw"
           />
         </div>

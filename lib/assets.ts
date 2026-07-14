@@ -6,19 +6,19 @@ export const assets = {
   ],
   sections: {
     targetAudience: {
-      src: "/imagenes/img seccion a quien va dirigido.png",
-      width: 367,
-      height: 635,
+      src: "/imagenes/img seccion a quien va dirigido2.png",
+      width: 1904,
+      height: 1959,
     },
     companyBenefits: {
-      src: "/imagenes/img seccion que obtiene tu empresa.png",
-      width: 395,
-      height: 637,
+      src: "/imagenes/img seccion que obtiene tu empresa2.png",
+      width: 1652,
+      height: 1959,
     },
     teamBenefits: {
-      src: "/imagenes/img seccion que obtiene tu equipo.png",
-      width: 371,
-      height: 635,
+      src: "/imagenes/img seccion que obtiene tu equipo2.png",
+      width: 1959,
+      height: 1959,
     },
   },
   programIncludes: {

@@ -16,12 +16,13 @@ export function TeamBenefits() {
   return (
     <section className="w-full text-white" style={{ backgroundColor: "#171219" }}>
       <div className="grid lg:grid-cols-[42fr_58fr]">
-        <div className="relative order-2 min-h-[22rem] sm:min-h-[28rem] lg:order-1 lg:min-h-[38rem]">
+        <div className="relative order-2 h-full min-h-[20rem] aspect-square sm:min-h-[24rem] lg:order-1 lg:aspect-auto lg:min-h-[38rem]">
           <Image
             src={image.src}
             alt={teamBenefits.imageAlt}
-            fill
-            className="object-cover object-center"
+            width={image.width}
+            height={image.height}
+            className="h-full w-full object-contain object-center"
             sizes="(min-width: 1024px) 42vw, 100vw"
             priority={false}
           />
