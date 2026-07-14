@@ -1,5 +1,10 @@
 "use client";
 
+import Image from "next/image";
+
+import { PixelBullet } from "@/components/ui/PixelBullet";
+
+import { assets } from "@/lib/assets";
 import { useLanguage } from "@/lib/i18n/language-context";
 
 export function Calendar() {
@@ -9,48 +14,51 @@ export function Calendar() {
   return (
     <section
       id="calendario"
-      className="w-full bg-brand-surface px-8 py-20 sm:px-12 lg:px-16 xl:px-20"
+      className="w-full text-white"
+      style={{ backgroundColor: "#171219" }}
     >
-      <div className="mx-auto max-w-4xl text-center">
-        <div
-          className="mx-auto mb-8 h-1 w-16 rounded-full"
-          style={{ backgroundColor: "#1f55a0" }}
-        />
+      <div className="grid lg:grid-cols-2">
+        <div className="flex flex-col justify-center gap-10 px-8 py-16 sm:px-12 lg:px-16 lg:py-24 xl:px-20">
+          <div>
+            <h2 className="text-3xl leading-tight sm:text-4xl lg:text-5xl">
+              {calendar.title}
+            </h2>
 
-        <h2 className="font-anta text-3xl leading-tight text-[#5f93e6] sm:text-4xl lg:text-5xl">
-          {calendar.title}
-        </h2>
-
-        <div className="mt-12 overflow-hidden rounded-2xl border border-zinc-200 bg-white text-center">
-          <div className="hidden grid-cols-[1fr_2fr] border-b border-zinc-200 bg-brand-blue/10 px-6 py-4 sm:grid">
-            <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-zinc-500">
-              {calendar.dateColumn}
-            </p>
-            <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-zinc-500">
-              {calendar.milestoneColumn}
-            </p>
+            <ul className="mt-8 space-y-5">
+              {calendar.milestones.map((item) => (
+                <li key={item.date} className="flex items-start gap-3">
+                  <PixelBullet className="mt-1" />
+                  <div>
+                    <p className="text-base font-bold leading-snug sm:text-lg">
+                      {item.date}
+                    </p>
+                    <p className="text-sm leading-relaxed text-white/75 sm:text-base">
+                      {item.milestone}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <ul>
-            {calendar.milestones.map((item, index) => (
-              <li
-                key={item.date}
-                className={`grid grid-cols-1 gap-2 border-b border-zinc-200 px-6 py-5 text-center last:border-b-0 sm:grid-cols-[1fr_2fr] sm:items-center sm:gap-6 ${
-                  index % 2 === 0 ? "bg-brand-surface" : "bg-white"
-                }`}
-              >
-                <p
-                  className="text-sm font-semibold sm:text-base"
-                  style={{ color: "#1f55a0" }}
-                >
-                  {item.date}
-                </p>
-                <p className="text-sm leading-relaxed text-zinc-700 sm:text-base">
-                  {item.milestone}
-                </p>
-              </li>
-            ))}
-          </ul>
+          <div className="max-w-lg">
+            <p className="text-[calc(1.25rem+4pt)] leading-tight sm:text-[calc(1.5rem+4pt)]">
+              {calendar.quote}
+            </p>
+            <p className="mt-4 text-[calc(0.875rem+4pt)] leading-relaxed text-white/75 sm:text-[calc(1rem+4pt)]">
+              {calendar.quoteBody}
+            </p>
+          </div>
+        </div>
+
+        <div className="relative min-h-[320px] lg:min-h-full">
+          <Image
+            src={assets.heroSlides[1]}
+            alt=""
+            fill
+            className="object-contain object-center lg:object-right"
+            sizes="(min-width: 1024px) 50vw, 100vw"
+          />
         </div>
       </div>
     </section>

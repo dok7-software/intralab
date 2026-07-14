@@ -49,13 +49,13 @@ export function Header() {
   const sectionLinks =
     locale === "es"
       ? [
-          { href: "#propuesta", label: "Propuesta" },
+          { href: "#que-es", label: "Qué es" },
           { href: "#programa", label: "Programa" },
           { href: "#calendario", label: "Calendario" },
           { href: "#faq", label: "FAQ" },
         ]
       : [
-          { href: "#propuesta", label: "Proposta" },
+          { href: "#que-es", label: "Què és" },
           { href: "#programa", label: "Programa" },
           { href: "#calendario", label: "Calendari" },
           { href: "#faq", label: "FAQ" },
@@ -71,7 +71,7 @@ export function Header() {
         <a
           href="#inicio"
           className="font-anta text-lg leading-none sm:text-xl lg:col-start-1"
-          style={{ color: "#5f93e6" }}
+          style={{ color: "#1f55a0" }}
         >
           IntraLab 22@
         </a>
@@ -88,7 +88,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center justify-end gap-3 lg:col-start-3 lg:flex">
+        <div className="hidden items-center justify-end gap-4 lg:col-start-3 lg:flex">
           <LanguageToggle />
           <a
             href="#formulario-admision"

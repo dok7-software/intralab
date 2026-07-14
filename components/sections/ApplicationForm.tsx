@@ -107,7 +107,7 @@ export function ApplicationForm() {
           style={{ backgroundColor: "#1f55a0" }}
         />
 
-        <h2 className="font-anta text-2xl leading-tight text-[#5f93e6] sm:text-3xl lg:text-4xl">
+        <h2 className="text-2xl leading-tight text-[#1f55a0] sm:text-3xl lg:text-4xl">
           {applicationForm.title}
         </h2>
 

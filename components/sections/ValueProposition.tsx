@@ -1,40 +1,39 @@
 "use client";
 
 import { useLanguage } from "@/lib/i18n/language-context";
+import { WhatIsIntralabPixelDecor } from "@/components/ui/WhatIsIntralabPixelDecor";
 
 export function ValueProposition() {
   const { t } = useLanguage();
-  const { valueProposition } = t;
+  const { whatIsIntralab } = t;
 
   return (
     <section
-      id="propuesta"
-      className="w-full bg-white px-8 py-20 sm:px-12 lg:px-16 xl:px-20"
+      id="que-es"
+      className="relative w-full overflow-hidden py-16 pl-10 pr-8 text-white sm:py-20 sm:pl-14 sm:pr-10 lg:py-24 lg:pl-20 lg:pr-16 xl:pl-24 xl:pr-20"
+      style={{ backgroundColor: "#171219" }}
     >
-      <div className="mx-auto max-w-4xl text-center">
-        <div
-          className="mx-auto mb-8 h-1 w-16 rounded-full"
-          style={{ backgroundColor: "#1f55a0" }}
-        />
+      <div className="pointer-events-none absolute top-0 right-0 bottom-0 hidden overflow-hidden lg:block">
+        <WhatIsIntralabPixelDecor className="translate-x-3" />
+      </div>
 
-        <h2 className="font-anta text-3xl leading-tight text-[#5f93e6] sm:text-4xl lg:text-5xl">
-          {valueProposition.title}
+      <div className="relative z-10 max-w-3xl">
+        <h2 className="text-[clamp(2.125rem,3.6vw,3.25rem)] leading-[1.08] tracking-tight">
+          {whatIsIntralab.title}
         </h2>
 
-        <p className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-zinc-600 sm:text-lg lg:text-xl">
-          <span className="font-semibold" style={{ color: "#1f55a0" }}>
-            IntraLab 22@
-          </span>
-          {valueProposition.copy}
-        </p>
+        <div className="mt-8 space-y-5 text-[1.05rem] leading-relaxed text-white/85 sm:text-lg">
+          {whatIsIntralab.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
 
-        <a
-          href="#formulario-admision"
-          className="mt-10 inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-semibold transition-opacity hover:opacity-90"
-          style={{ backgroundColor: "#1f55a0", color: "#ffffff" }}
-        >
-          {valueProposition.cta}
-        </a>
+        <p className="mt-8 text-[1.55rem] leading-snug text-white/90 sm:text-[1.625rem]">
+          {whatIsIntralab.highlightBefore}
+        </p>
+        <p className="mt-2 text-[1.55rem] font-bold leading-snug sm:text-[1.625rem]">
+          {whatIsIntralab.highlightAfter}
+        </p>
       </div>
     </section>
   );

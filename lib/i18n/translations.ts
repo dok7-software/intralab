@@ -4,84 +4,159 @@ export const translations = {
   es: {
     meta: {
       description:
-        "Programa de Preaceleración de Intraemprendimiento Tecnológico",
+        "Programa de Preaceleración de Intraemprendimiento corporativo 100% subvencionado.",
     },
     header: {
       programOf: "Programa de:",
       fundedBy: "Financiado por:",
+      networkAlt: "22@Network Barcelona",
     },
     hero: {
-      deadline: "PLAZAS ABIERTAS HASTA EL 18 DE JULIO",
-      startDate: "INICIO DEL PROGRAMA EL 14 DE SEPTIEMBRE",
+      kicker: "Programa de Preaceleración de Intraemprendimiento",
       title: "IntraLab 22@",
-      subtitle:
-        "Programa de Preaceleración de Intraemprendimiento Tecnológico",
+      tagline:
+        "Transforma el talento de tu empresa en intraemprendedores con impacto",
+      duration: "14/09 - 14/12 · 4 meses",
+      coordinatesLabel: "Coordina:",
+      fundedByLabel: "Financiado por:",
       fundingDisclaimer:
         "Financiado por el Departamento de Empresa y Trabajo de la Generalitat de Catalunya y cofinanciado por el Fondo Social Europeo Plus",
       slideLabel: "Diapositiva",
     },
-    valueProposition: {
-      title:
-        "Convierte el reto de tu empresa en una solución validada en el mercado.",
-      copy: " no parte de ideas al aire, soluciona los problemas reales de tu día a día. En 4 meses te damos la metodología, la mentoría y el ecosistema 22@ para convertir ese reto en un proyecto listo para facturar.",
-      cta: "Quiero participar",
+    hook: {
+      titleLine1: "¿Y si la próxima gran innovación",
+      titleLine2: "de tu empresa ya existiera?",
+      paragraphs: [
+        "Todos los días, dentro de las empresas nacen ideas con potencial para mejorar procesos, desarrollar nuevos productos, optimizar operaciones o responder a las nuevas necesidades del mercado.",
+        "Sin embargo, muchas de ellas nunca llegan a convertirse en proyectos reales.",
+      ],
+      reasons: ["No es porque falte talento.", "No es porque falten oportunidades."],
+      explanation:
+        "Sino porque las organizaciones no siempre disponen del tiempo, la metodología o el entorno necesarios para desarrollarlas.",
+      closingBefore: "IntraLab 22@ nace para ayudar a impulsar las ideas y fomentar el espíritu emprendedor dentro de tu empresa.",
+    },
+    whatIsIntralab: {
+      title: "¿Qué es IntraLab?",
+      paragraphs: [
+        "IntraLab es un programa de preaceleración de intraemprendimiento (Intrapreneurship) corporativo 100% subvencionado, que ayuda a empresas de cualquier sector a transformar retos internos en proyectos innovadores con potencial de generar nuevos productos, servicios, procesos o modelos de negocio y formar a sus líderes.",
+        "A través de una metodología eminentemente práctica, acompañamiento experto y conexión con el ecosistema 22@, los equipos desarrollan soluciones reales sobre desafíos reales de la propia organización.",
+      ],
+      highlightBefore: "No trabajamos sobre proyectos ficticios.",
+      highlightAfter: "Trabajamos con proyectos que marcarán el futuro de tu empresa.",
     },
     targetAudience: {
-      title: "Para quienes lideran la transformación",
-      audiences: [
-        {
-          label: "Pymes y medianas empresas",
-          description:
-            "Agiliza procesos y protege tu ventaja competitiva sin montar un departamento de innovación.",
-        },
-        {
-          label: "Intraemprendedores",
-          description:
-            "Profesionales y directivos con capacidad de pilotar proyectos disruptivos dentro de su empresa.",
-        },
-        {
-          label: "Empresas industriales y tecnológicas",
-          description:
-            "Organizaciones que quieren aplicar innovación real a sus procesos, productos o líneas de negocio.",
-        },
+      title: "¿A quién va dirigido?",
+      intro:
+        "Empresas de cualquier sector que quieran impulsar la innovación desde dentro de su organización.",
+      subheading: "Especialmente dirigido a:",
+      items: [
+        "Empresas de todos los tamaños",
+        "Empresas industriales y tecnológicas",
+        "Empresas de servicios",
+        "Organizaciones en procesos de transformación",
+        "Empresas que quieran desarrollar nuevos productos, procesos o líneas de negocio",
+        "Organizaciones comprometidas con el desarrollo del talento interno",
       ],
+      imageAlt: "Directiva presentando resultados de innovación ante su equipo",
     },
     programIncludes: {
-      title: "De la idea a la acción, con la metodología learning by doing",
-      trainingHeadline: "de formación práctica, en cuatro bloques:",
-      trainingHours: "100 horas",
+      title: "¿Qué incluye el programa?",
       blocks: [
-        "Detecta oportunidades con potencial de negocio.",
-        "Analiza el mercado y valida la demanda antes de invertir.",
-        "Diseña tu MVP con IA y automatización.",
-        "Escala con un modelo de negocio listo para el mercado.",
-      ],
-      mentoringHours: "80 horas",
-      mentoring:
-        "de mentoría personalizada con expertos del ecosistema 22@ que te acompañan en cada decisión.",
-      communityPrefix: "Al terminar, formas parte de una",
-      communityHighlight: "comunidad",
-      communitySuffix:
-        "que te conecta con empresas, inversores y talento del 22@.",
-    },
-    calendar: {
-      title: "Un itinerario pensado para avanzar",
-      dateColumn: "Fecha",
-      milestoneColumn: "Hito",
-      milestones: [
-        { date: "24 julio 2026", milestone: "Cierre de candidaturas" },
-        { date: "27 julio 2026", milestone: "Selección de proyectos" },
-        { date: "14 septiembre 2026", milestone: "Kick Off del programa" },
         {
-          date: "14 diciembre 2026",
-          milestone: "Demo Day ante empresas, mentores e inversores",
+          title: "100 horas de formación especializada",
+          description:
+            "Con contenidos prácticos en innovación, inteligencia artificial, validación de mercado, desarrollo de modelos de negocio, liderazgo, financiación, propiedad intelectual y metodologías ágiles.",
+        },
+        {
+          title: "80 horas de mentoría personalizada",
+          description:
+            "Cada equipo contará con el acompañamiento de expertos que ayudarán a acelerar el desarrollo del proyecto y validar cada una de las fases.",
+        },
+        {
+          title: "Trabajo sobre un reto real",
+          description:
+            "Todo el aprendizaje se aplica directamente sobre un reto de la propia empresa. No se trabaja sobre casos ficticios.",
+        },
+        {
+          title: "Acceso al ecosistema 22@",
+          description:
+            "Empresas, universidades, centros tecnológicos, startups, expertos, mentores...",
+        },
+        {
+          title: "Demo Day",
+          description: "Presentación final de proyectos desarrollados.",
         },
       ],
     },
-    formIntro: {
-      copyBefore: "Completa el formulario. Si eres seleccionado, formarás parte de la nueva edición de ",
-      copyAfter: ".",
-      cta: "Enviar candidatura",
+    companyBenefits: {
+      titleLine1: "¿Qué obtiene",
+      titleLine2: "tu empresa?",
+      items: [
+        {
+          title: "Innovación aplicada",
+          description:
+            "Convierte un reto interno en un proyecto con potencial real de crecimiento.",
+        },
+        {
+          title: "Desarrollo del talento",
+          description:
+            "Empodera a tus equipos y desarrolla nuevas capacidades de liderazgo e innovación.",
+        },
+        {
+          title: "Cultura innovadora y emprendedora",
+          description:
+            "Introduce metodologías que permanecerán dentro de la organización una vez finalizado el programa.",
+        },
+        {
+          title: "Validación",
+          description:
+            "Reduce la incertidumbre validando nuevas ideas antes de realizar grandes inversiones.",
+        },
+        {
+          title: "Ecosistema",
+          description:
+            "Conecta con empresas, start-ups, universidades, expertos y centros tecnológicos del distrito 22@.",
+        },
+      ],
+      imageAlt: "Edificio del distrito tecnológico 22@ Barcelona al atardecer",
+    },
+    teamBenefits: {
+      titleLine1: "¿Qué obtiene",
+      titleLine2: "tu equipo?",
+      items: [
+        "Nuevas competencias",
+        "Visión estratégica",
+        "Herramientas de innovación",
+        "Metodologías prácticas",
+        "Mentoría individualizada",
+        "Redes de contactos",
+        "Visibilidad interna",
+        "Liderazgo y cultura emprendedora",
+      ],
+      imageAlt: "Equipo de intraemprendedores trabajando juntos en una sesión de mentoría",
+    },
+    calendar: {
+      title: "Fechas clave",
+      milestones: [
+        { date: "Hasta el 24 de julio", milestone: "Presentación de candidaturas." },
+        { date: "27 de julio", milestone: "Proceso de selección." },
+        { date: "14 de septiembre", milestone: "Inicio del programa." },
+        { date: "14 de diciembre", milestone: "Demo Day y clausura." },
+      ],
+      quote: "La innovación no siempre requiere de una gran inversión",
+      quoteBody:
+        "Empieza muchas veces con una idea, un equipo motivado y emprendedor, un reto bien definido en el entorno adecuado para convertir esta idea en una realidad.",
+    },
+    ctaFinal: {
+      title: "¡Presenta tu candidatura!",
+      subtitle: "Convierte un reto de hoy en la oportunidad para el mañana.",
+      primaryCta: "Enviar candidatura",
+      secondaryCta: "secretariatecnica@22network.net",
+      secondaryHref: "mailto:secretariatecnica@22network.net",
+      fundingDisclaimerLine1:
+        "Financiado por el Departamento de Empresa y Trabajo de la Generalitat",
+      fundingDisclaimerLine2:
+        "de Catalunya y cofinanciado por el Fondo Social Europeo Plus",
     },
     applicationForm: {
       title: "Formulario de Admisión de Proyectos – Convocatoria 2026",
@@ -146,85 +221,160 @@ export const translations = {
   ca: {
     meta: {
       description:
-        "Programa de Preacceleració d'Intraemprenedoria Tecnològica",
+        "Programa de Preacceleració d'Intraemprenedoria corporativa 100% subvencionada.",
     },
     header: {
       programOf: "Programa de:",
       fundedBy: "Finançat per:",
+      networkAlt: "22@Network Barcelona",
     },
     hero: {
-      deadline: "PLACES OBERTES FINS EL 18 DE JULIOL",
-      startDate: "INICI DEL PROGRAMA EL 14 DE SETEMBRE",
+      kicker: "Programa de Preacceleració d'Intraemprenedoria",
       title: "IntraLab 22@",
-      subtitle:
-        "Programa de Preacceleració d'Intraemprenedoria Tecnològica",
+      tagline:
+        "Transforma el talent de la teva empresa en intraemprenedors amb impacte",
+      duration: "14/09 - 14/12 · 4 mesos",
+      coordinatesLabel: "Coordina:",
+      fundedByLabel: "Finançat per:",
       fundingDisclaimer:
         "Finançat pel Departament d'Empresa i Treball de la Generalitat de Catalunya i cofinançat pel Fons Social Europeu Plus",
       slideLabel: "Diapositiva",
     },
-    valueProposition: {
-      title:
-        "Converteix el repte de la teva empresa en una solució validada al mercat.",
-      copy: " no parteix d'idees a l'aire, soluciona els problemes reals del teu dia a dia. En 4 mesos et donem la metodologia, la mentoria i l'ecosistema 22@ per convertir aquest repte en un projecte llest per facturar.",
-      cta: "Vull participar",
+    hook: {
+      titleLine1: "I si la propera gran innovació",
+      titleLine2: "de la teva empresa ja existís?",
+      paragraphs: [
+        "Cada dia, dins de les empreses neixen idees amb potencial per millorar processos, desenvolupar nous productes, optimitzar operacions o respondre a les noves necessitats del mercat.",
+        "Tot i això, moltes d'elles mai arriben a convertir-se en projectes reals.",
+      ],
+      reasons: ["No és perquè falti talent.", "No és perquè faltin oportunitats."],
+      explanation:
+        "Sinó perquè les organitzacions no sempre disposen del temps, la metodologia o l'entorn necessaris per desenvolupar-les.",
+      closingBefore:
+        "IntraLab 22@ neix per ajudar a impulsar les idees i fomentar l'esperit emprenedor dins de la teva empresa.",
+    },
+    whatIsIntralab: {
+      title: "Què és IntraLab?",
+      paragraphs: [
+        "IntraLab és un programa de preacceleració d'intraemprenedoria (Intrapreneurship) corporativa 100% subvencionada, que ajuda empreses de qualsevol sector a transformar reptes interns en projectes innovadors amb potencial de generar nous productes, serveis, processos o models de negoci i formar els seus líders.",
+        "A través d'una metodologia eminentment pràctica, acompanyament expert i connexió amb l'ecosistema 22@, els equips desenvolupen solucions reals sobre desafiaments reals de la mateixa organització.",
+      ],
+      highlightBefore: "No treballem sobre projectes ficticis.",
+      highlightAfter: "Treballem amb projectes que marcaran el futur de la teva empresa.",
     },
     targetAudience: {
-      title: "Per a qui lidera la transformació",
-      audiences: [
-        {
-          label: "Pimes i mitjanes empreses",
-          description:
-            "Agilitza processos i protegeix el teu avantatge competitiu sense muntar un departament d'innovació.",
-        },
-        {
-          label: "Intraemprenedors",
-          description:
-            "Professionals i directius amb capacitat de pilotar projectes disruptius dins de la seva empresa.",
-        },
-        {
-          label: "Empreses industrials i tecnològiques",
-          description:
-            "Organitzacions que volen aplicar innovació real als seus processos, productes o línies de negoci.",
-        },
+      title: "A qui va dirigit?",
+      intro:
+        "Empreses de qualsevol sector que vulguin impulsar la innovació des de dins de la seva organització.",
+      subheading: "Especialment dirigit a:",
+      items: [
+        "Empreses de totes les mides",
+        "Empreses industrials i tecnològiques",
+        "Empreses de serveis",
+        "Organitzacions en processos de transformació",
+        "Empreses que vulguin desenvolupar nous productes, processos o línies de negoci",
+        "Organitzacions compromeses amb el desenvolupament del talent intern",
       ],
+      imageAlt: "Directiva presentant resultats d'innovació davant el seu equip",
     },
     programIncludes: {
-      title: "De la idea a l'acció, amb la metodologia learning by doing",
-      trainingHeadline: "de formació pràctica, en quatre blocs:",
-      trainingHours: "100 hores",
+      title: "Què inclou el programa?",
       blocks: [
-        "Detecta oportunitats amb potencial de negoci.",
-        "Analitza el mercat i valida la demanda abans d'invertir.",
-        "Dissenya el teu MVP amb IA i automatització.",
-        "Escala amb un model de negoci llest per al mercat.",
-      ],
-      mentoringHours: "80 hores",
-      mentoring:
-        "de mentoria personalitzada amb experts de l'ecosistema 22@ que t'acompanyen en cada decisió.",
-      communityPrefix: "En acabar, formes part d'una",
-      communityHighlight: "comunitat",
-      communitySuffix:
-        "que et connecta amb empreses, inversors i talent del 22@.",
-    },
-    calendar: {
-      title: "Un itinerari pensat per avançar",
-      dateColumn: "Data",
-      milestoneColumn: "Fita",
-      milestones: [
-        { date: "24 juliol 2026", milestone: "Tancament de candidatures" },
-        { date: "27 juliol 2026", milestone: "Selecció de projectes" },
-        { date: "14 setembre 2026", milestone: "Kick Off del programa" },
         {
-          date: "14 desembre 2026",
-          milestone: "Demo Day davant empreses, mentors i inversors",
+          title: "100 hores de formació especialitzada",
+          description:
+            "Amb continguts pràctics en innovació, intel·ligència artificial, validació de mercat, desenvolupament de models de negoci, lideratge, finançament, propietat intel·lectual i metodologies àgils.",
+        },
+        {
+          title: "80 hores de mentoria personalitzada",
+          description:
+            "Cada equip comptarà amb l'acompanyament d'experts que ajudaran a accelerar el desenvolupament del projecte i validar cadascuna de les fases.",
+        },
+        {
+          title: "Treball sobre un repte real",
+          description:
+            "Tot l'aprenentatge s'aplica directament sobre un repte de la mateixa empresa. No es treballa sobre casos ficticis.",
+        },
+        {
+          title: "Accés a l'ecosistema 22@",
+          description:
+            "Empreses, universitats, centres tecnològics, startups, experts, mentors...",
+        },
+        {
+          title: "Demo Day",
+          description: "Presentació final de projectes desenvolupats.",
         },
       ],
     },
-    formIntro: {
-      copyBefore:
-        "Completa el formulari. Si ets seleccionat, formaràs part de la nova edició de ",
-      copyAfter: ".",
-      cta: "Enviar candidatura",
+    companyBenefits: {
+      titleLine1: "Què obté",
+      titleLine2: "la teva empresa?",
+      items: [
+        {
+          title: "Innovació aplicada",
+          description:
+            "Converteix un repte intern en un projecte amb potencial real de creixement.",
+        },
+        {
+          title: "Desenvolupament del talent",
+          description:
+            "Empodera els teus equips i desenvolupa noves capacitats de lideratge i innovació.",
+        },
+        {
+          title: "Cultura innovadora i emprenedora",
+          description:
+            "Introdueix metodologies que romandran dins de l'organització un cop finalitzat el programa.",
+        },
+        {
+          title: "Validació",
+          description:
+            "Redueix la incertesa validant noves idees abans de realitzar grans inversions.",
+        },
+        {
+          title: "Ecosistema",
+          description:
+            "Connecta amb empreses, start-ups, universitats, experts i centres tecnològics del districte 22@.",
+        },
+      ],
+      imageAlt: "Edifici del districte tecnològic 22@ Barcelona al capvespre",
+    },
+    teamBenefits: {
+      titleLine1: "Què obté",
+      titleLine2: "el teu equip?",
+      items: [
+        "Noves competències",
+        "Visió estratègica",
+        "Eines d'innovació",
+        "Metodologies pràctiques",
+        "Mentoria individualitzada",
+        "Xarxes de contactes",
+        "Visibilitat interna",
+        "Lideratge i cultura emprenedora",
+      ],
+      imageAlt: "Equip d'intraemprenedors treballant junts en una sessió de mentoria",
+    },
+    calendar: {
+      title: "Dates clau",
+      milestones: [
+        { date: "Fins el 24 de juliol", milestone: "Presentació de candidatures." },
+        { date: "27 de juliol", milestone: "Procés de selecció." },
+        { date: "14 de setembre", milestone: "Inici del programa." },
+        { date: "14 de desembre", milestone: "Demo Day i cloenda." },
+      ],
+      quote: "La innovació no sempre requereix una gran inversió",
+      quoteBody:
+        "Comença moltes vegades amb una idea, un equip motivat i emprenedor, un repte ben definit en l'entorn adequat per convertir aquesta idea en una realitat.",
+    },
+    ctaFinal: {
+      title: "Presenta la teva candidatura!",
+      subtitle: "Converteix un repte d'avui en l'oportunitat per al demà.",
+      primaryCta: "Enviar candidatura",
+      secondaryCta: "secretariatecnica@22network.net",
+      secondaryHref: "mailto:secretariatecnica@22network.net",
+      fundingDisclaimerLine1:
+        "Finançat pel Departament d'Empresa i Treball de la Generalitat",
+      fundingDisclaimerLine2:
+        "de Catalunya i cofinançat pel Fons Social Europeu Plus",
     },
     applicationForm: {
       title: "Formulari d'Admissió de Projectes – Convocatòria 2026",
