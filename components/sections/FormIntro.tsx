@@ -42,7 +42,7 @@ export function FormIntro() {
         </div>
 
         <div className="mt-14 flex flex-wrap items-start justify-center gap-x-12 gap-y-6">
-          <div>
+          <div className="text-left">
             <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-white/60">
               {header.programOf}
             </p>
@@ -51,7 +51,7 @@ export function FormIntro() {
               alt="22@Network Barcelona"
               width={160}
               height={40}
-              className="h-8 w-auto object-contain"
+              className="h-8 w-auto object-contain object-left"
             />
           </div>
           <div className="text-left">
@@ -74,10 +74,9 @@ export function FormIntro() {
                 className="h-8 w-auto object-contain"
               />
             </div>
-            <p className="mt-3 max-w-xs text-[10px] italic leading-snug text-white sm:max-w-sm sm:text-[11px]">
-              {ctaFinal.fundingDisclaimerLine1}
-              <br />
-              {ctaFinal.fundingDisclaimerLine2}
+            <p className="mt-3 max-w-md text-[10px] italic leading-snug text-white sm:text-[11px]">
+              <span className="block">{ctaFinal.fundingDisclaimerLine1}</span>
+              <span className="block">{ctaFinal.fundingDisclaimerLine2}</span>
             </p>
           </div>
         </div>
