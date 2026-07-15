@@ -22,10 +22,6 @@ export function Hook() {
           {hook.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
-          {hook.reasons.map((reason) => (
-            <p key={reason}>{reason}</p>
-          ))}
-          <p>{hook.explanation}</p>
         </div>
 
         <p className="mx-auto mt-8 max-w-2xl text-lg font-bold leading-snug sm:text-xl">

@@ -26,24 +26,22 @@ export const translations = {
     },
     hook: {
       titleLine1: "¿Y si la próxima gran innovación",
-      titleLine2: "de tu empresa ya existiera?",
+      titleLine2: "de tu empresa ya estuviera dentro?",
       paragraphs: [
-        "Todos los días, dentro de las empresas nacen ideas con potencial para mejorar procesos, desarrollar nuevos productos, optimizar operaciones o responder a las nuevas necesidades del mercado.",
-        "Sin embargo, muchas de ellas nunca llegan a convertirse en proyectos reales.",
+        "Las mejores ideas ya existen en tu organización. Lo que muchas veces falta es el tiempo, la metodología y el entorno adecuados para convertirlas en proyectos reales.",
       ],
-      reasons: ["No es porque falte talento.", "No es porque falten oportunidades."],
-      explanation:
-        "Sino porque las organizaciones no siempre disponen del tiempo, la metodología o el entorno necesarios para desarrollarlas.",
-      closingBefore: "IntraLab 22@ nace para ayudar a impulsar las ideas y fomentar el espíritu emprendedor dentro de tu empresa.",
+      closingBefore:
+        "IntraLab 22@ transforma ese potencial en innovación, impulsando proyectos con impacto y fortaleciendo una cultura de intraemprendimiento.",
     },
     whatIsIntralab: {
       title: "¿Qué es IntraLab?",
       paragraphs: [
-        "IntraLab es un programa de preaceleración de intraemprendimiento (Intrapreneurship) corporativo 100% subvencionado, que ayuda a empresas de cualquier sector a transformar retos internos en proyectos innovadores con potencial de generar nuevos productos, servicios, procesos o modelos de negocio y formar a sus líderes.",
-        "A través de una metodología eminentemente práctica, acompañamiento experto y conexión con el ecosistema 22@, los equipos desarrollan soluciones reales sobre desafíos reales de la propia organización.",
+        "IntraLab convierte los retos de tu empresa en proyectos innovadores con impacto real. Un programa de preaceleración de intraemprendimiento 100% subvencionado.",
+        "Combinamos metodología práctica, expertos y conexión con el ecosistema de innovación para que tus equipos desarrollen soluciones aplicables, impulsen nuevos negocios y lideren el cambio.",
       ],
-      highlightBefore: "No trabajamos sobre proyectos ficticios.",
-      highlightAfter: "Trabajamos con proyectos que marcarán el futuro de tu empresa.",
+      highlightBefore: "No trabajamos con ideas ficticias.",
+      highlightAfter:
+        "Trabajamos con los desafíos reales de tu organización para construir el futuro de tu empresa.",
     },
     targetAudience: {
       title: "¿A quién va dirigido?",
@@ -244,25 +242,22 @@ export const translations = {
     },
     hook: {
       titleLine1: "I si la propera gran innovació",
-      titleLine2: "de la teva empresa ja existís?",
+      titleLine2: "de la teva empresa ja estigués a dins?",
       paragraphs: [
-        "Cada dia, dins de les empreses neixen idees amb potencial per millorar processos, desenvolupar nous productes, optimitzar operacions o respondre a les noves necessitats del mercat.",
-        "Tot i això, moltes d'elles mai arriben a convertir-se en projectes reals.",
+        "Les millors idees ja existeixen a la teva organització. El que moltes vegades falta és el temps, la metodologia i l'entorn adequats per convertir-les en projectes reals.",
       ],
-      reasons: ["No és perquè falti talent.", "No és perquè faltin oportunitats."],
-      explanation:
-        "Sinó perquè les organitzacions no sempre disposen del temps, la metodologia o l'entorn necessaris per desenvolupar-les.",
       closingBefore:
-        "IntraLab 22@ neix per ajudar a impulsar les idees i fomentar l'esperit emprenedor dins de la teva empresa.",
+        "IntraLab 22@ transforma aquest potencial en innovació, impulsant projectes amb impacte i enfortint una cultura d'intraemprenedoria.",
     },
     whatIsIntralab: {
       title: "Què és IntraLab?",
       paragraphs: [
-        "IntraLab és un programa de preacceleració d'intraemprenedoria (Intrapreneurship) corporativa 100% subvencionada, que ajuda empreses de qualsevol sector a transformar reptes interns en projectes innovadors amb potencial de generar nous productes, serveis, processos o models de negoci i formar els seus líders.",
-        "A través d'una metodologia eminentment pràctica, acompanyament expert i connexió amb l'ecosistema 22@, els equips desenvolupen solucions reals sobre desafiaments reals de la mateixa organització.",
+        "IntraLab converteix els reptes de la teva empresa en projectes innovadors amb impacte real. Un programa de preacceleració d'intraemprenedoria 100% subvencionat.",
+        "Combinem metodologia pràctica, experts i connexió amb l'ecosistema d'innovació perquè els teus equips desenvolupin solucions aplicables, impulsin nous negocis i liderin el canvi.",
       ],
-      highlightBefore: "No treballem sobre projectes ficticis.",
-      highlightAfter: "Treballem amb projectes que marcaran el futur de la teva empresa.",
+      highlightBefore: "No treballem amb idees fictícies.",
+      highlightAfter:
+        "Treballem amb els desafiaments reals de la teva organització per construir el futur de la teva empresa.",
     },
     targetAudience: {
       title: "A qui va dirigit?",
