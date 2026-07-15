@@ -16,8 +16,9 @@ export const translations = {
       title: "IntraLab 22@",
       tagline:
         "Transforma el talento de tu empresa en intraemprendedores con impacto",
-      duration: "14/09 - 14/12 · 4 meses",
-      coordinatesLabel: "Coordina:",
+      duration: "Inicio 14/09 hasta 14/12 · 4 meses",
+      applicationDeadline: "Candidaturas hasta el 24 de julio",
+      coordinatesLabel: "Programa de:",
       fundedByLabel: "Financiado por:",
       fundingDisclaimer:
         "Financiado por el Departamento de Empresa y Trabajo de la Generalitat de Catalunya y cofinanciado por el Fondo Social Europeo Plus",
@@ -151,12 +152,12 @@ export const translations = {
       title: "¡Presenta tu candidatura!",
       subtitle: "Convierte un reto de hoy en la oportunidad para el mañana.",
       primaryCta: "Enviar candidatura",
-      secondaryCta: "secretariatecnica@22network.net",
-      secondaryHref: "mailto:secretariatecnica@22network.net",
+      secondaryCta: "info@intralab.cat",
+      secondaryHref: "mailto:info@intralab.cat",
       fundingDisclaimerLine1:
-        "Financiado por el Departamento de Empresa y Trabajo de la Generalitat",
+        "Financiado por el Departamento de Empresa y Trabajo",
       fundingDisclaimerLine2:
-        "de Catalunya y cofinanciado por el Fondo Social Europeo Plus",
+        "de la Generalitat de Catalunya y cofinanciado por el Fondo Social Europeo Plus",
     },
     applicationForm: {
       title: "Formulario de Admisión de Proyectos – Convocatoria 2026",
@@ -233,8 +234,9 @@ export const translations = {
       title: "IntraLab 22@",
       tagline:
         "Transforma el talent de la teva empresa en intraemprenedors amb impacte",
-      duration: "14/09 - 14/12 · 4 mesos",
-      coordinatesLabel: "Coordina:",
+      duration: "Inici 14/09 fins al 14/12 · 4 mesos",
+      applicationDeadline: "Candidatures fins al 24 de juliol",
+      coordinatesLabel: "Programa de:",
       fundedByLabel: "Finançat per:",
       fundingDisclaimer:
         "Finançat pel Departament d'Empresa i Treball de la Generalitat de Catalunya i cofinançat pel Fons Social Europeu Plus",
@@ -369,12 +371,12 @@ export const translations = {
       title: "Presenta la teva candidatura!",
       subtitle: "Converteix un repte d'avui en l'oportunitat per al demà.",
       primaryCta: "Enviar candidatura",
-      secondaryCta: "secretariatecnica@22network.net",
-      secondaryHref: "mailto:secretariatecnica@22network.net",
+      secondaryCta: "info@intralab.cat",
+      secondaryHref: "mailto:info@intralab.cat",
       fundingDisclaimerLine1:
-        "Finançat pel Departament d'Empresa i Treball de la Generalitat",
+        "Finançat pel Departament d'Empresa i Treball",
       fundingDisclaimerLine2:
-        "de Catalunya i cofinançat pel Fons Social Europeu Plus",
+        "de la Generalitat de Catalunya i cofinançat pel Fons Social Europeu Plus",
     },
     applicationForm: {
       title: "Formulari d'Admissió de Projectes – Convocatòria 2026",

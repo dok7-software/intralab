@@ -47,6 +47,9 @@ export function Hero() {
         <div className="px-6 pt-4 pb-2">
           <p className="text-base leading-snug text-white">{hero.tagline}</p>
           <p className="mt-4 text-sm font-bold uppercase tracking-wide text-white/90">
+            {hero.applicationDeadline}
+          </p>
+          <p className="mt-2 text-sm font-bold uppercase tracking-wide text-white/90">
             {hero.duration}
           </p>
         </div>
@@ -143,6 +146,9 @@ export function Hero() {
               {hero.tagline}
             </p>
             <p className="mt-5 text-sm font-bold uppercase tracking-[0.15em] text-white/90">
+              {hero.applicationDeadline}
+            </p>
+            <p className="mt-2 text-sm font-bold uppercase tracking-[0.15em] text-white/90">
               {hero.duration}
             </p>
           </div>
