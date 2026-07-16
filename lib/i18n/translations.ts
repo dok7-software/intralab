@@ -16,7 +16,7 @@ export const translations = {
       title: "IntraLab 22@",
       tagline:
         "Transforma el talento de tu empresa en intraemprendedores con impacto",
-      duration: "Inicio 14/09 hasta 14/12 · 4 meses",
+      duration: "Inicio 21/09 hasta 16/12 · 4 meses",
       applicationDeadline: "Candidaturas hasta el 24 de julio",
       coordinatesLabel: "Programa de:",
       fundedByLabel: "Financiado por:",
@@ -139,8 +139,8 @@ export const translations = {
       milestones: [
         { date: "Hasta el 24 de julio", milestone: "Presentación de candidaturas." },
         { date: "27 de julio", milestone: "Proceso de selección." },
-        { date: "14 de septiembre", milestone: "Inicio del programa." },
-        { date: "14 de diciembre", milestone: "Demo Day y clausura." },
+        { date: "21 de septiembre de 2026", milestone: "Inicio del programa." },
+        { date: "16 de diciembre de 2026", milestone: "Demo Day y clausura." },
       ],
       quote: "La innovación no siempre requiere de una gran inversión",
       quoteBody:
@@ -232,7 +232,7 @@ export const translations = {
       title: "IntraLab 22@",
       tagline:
         "Transforma el talent de la teva empresa en intraemprenedors amb impacte",
-      duration: "Inici 14/09 fins al 14/12 · 4 mesos",
+      duration: "Inici 21/09 fins al 16/12 · 4 mesos",
       applicationDeadline: "Candidatures fins al 24 de juliol",
       coordinatesLabel: "Programa de:",
       fundedByLabel: "Finançat per:",
@@ -355,8 +355,8 @@ export const translations = {
       milestones: [
         { date: "Fins el 24 de juliol", milestone: "Presentació de candidatures." },
         { date: "27 de juliol", milestone: "Procés de selecció." },
-        { date: "14 de setembre", milestone: "Inici del programa." },
-        { date: "14 de desembre", milestone: "Demo Day i cloenda." },
+        { date: "21 de setembre de 2026", milestone: "Inici del programa." },
+        { date: "16 de desembre de 2026", milestone: "Demo Day i cloenda." },
       ],
       quote: "La innovació no sempre requereix una gran inversió",
       quoteBody:
