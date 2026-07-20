@@ -16,7 +16,7 @@ export const translations = {
       title: "IntraLab 22@",
       tagline:
         "Transforma el talento de tu empresa en intraemprendedores con impacto",
-      duration: "Inicio 21/09 hasta 16/12 · 4 meses",
+      duration: "Inicio 21/09 hasta 16/12",
       applicationDeadline: "Candidaturas hasta el 24 de julio",
       coordinatesLabel: "Programa de:",
       fundedByLabel: "Financiado por:",
@@ -232,7 +232,7 @@ export const translations = {
       title: "IntraLab 22@",
       tagline:
         "Transforma el talent de la teva empresa en intraemprenedors amb impacte",
-      duration: "Inici 21/09 fins al 16/12 · 4 mesos",
+      duration: "Inici 21/09 fins al 16/12",
       applicationDeadline: "Candidatures fins al 24 de juliol",
       coordinatesLabel: "Programa de:",
       fundedByLabel: "Finançat per:",
