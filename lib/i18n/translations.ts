@@ -17,7 +17,7 @@ export const translations = {
       tagline:
         "Transforma el talento de tu empresa en intraemprendedores con impacto",
       duration: "Inicio 21/09 hasta 16/12",
-      applicationDeadline: "Candidaturas hasta el 24 de julio",
+      applicationDeadline: "Candidaturas hasta el 28 de agosto",
       coordinatesLabel: "Programa de:",
       fundedByLabel: "Financiado por:",
       fundingDisclaimer:
@@ -46,15 +46,23 @@ export const translations = {
     targetAudience: {
       title: "¿A quién va dirigido?",
       intro:
-        "Empresas de cualquier sector que quieran impulsar la innovación desde dentro de su organización.",
-      subheading: "Especialmente dirigido a:",
-      items: [
-        "Empresas de todos los tamaños",
-        "Empresas industriales y tecnológicas",
-        "Empresas de servicios",
-        "Organizaciones en procesos de transformación",
-        "Empresas que quieran desarrollar nuevos productos, procesos o líneas de negocio",
-        "Organizaciones comprometidas con el desarrollo del talento interno",
+        "Medianas y grandes empresas de cualquier sector que quieran impulsar la innovación desde dentro de su organización.",
+      groups: [
+        {
+          heading: "Sectores e industrias:",
+          items: [
+            "Empresas industriales y tecnológicas",
+            "Empresas de servicios",
+          ],
+        },
+        {
+          heading: "Perfiles y necesidades:",
+          items: [
+            "Organizaciones en procesos de transformación",
+            "Empresas que quieran desarrollar nuevos productos, procesos o líneas de negocio",
+            "Organizaciones comprometidas con el desarrollo del talento interno",
+          ],
+        },
       ],
       imageAlt: "Directiva presentando resultados de innovación ante su equipo",
     },
@@ -137,7 +145,7 @@ export const translations = {
     calendar: {
       title: "Fechas clave",
       milestones: [
-        { date: "Hasta el 24 de julio", milestone: "Presentación de candidaturas." },
+        { date: "Hasta el 28 de agosto", milestone: "Presentación de candidaturas." },
         { date: "27 de julio", milestone: "Proceso de selección." },
         { date: "21 de septiembre de 2026", milestone: "Inicio del programa." },
         { date: "16 de diciembre de 2026", milestone: "Demo Day y clausura." },
@@ -233,7 +241,7 @@ export const translations = {
       tagline:
         "Transforma el talent de la teva empresa en intraemprenedors amb impacte",
       duration: "Inici 21/09 fins al 16/12",
-      applicationDeadline: "Candidatures fins al 24 de juliol",
+      applicationDeadline: "Candidatures fins al 28 d'agost",
       coordinatesLabel: "Programa de:",
       fundedByLabel: "Finançat per:",
       fundingDisclaimer:
@@ -262,15 +270,23 @@ export const translations = {
     targetAudience: {
       title: "A qui va dirigit?",
       intro:
-        "Empreses de qualsevol sector que vulguin impulsar la innovació des de dins de la seva organització.",
-      subheading: "Especialment dirigit a:",
-      items: [
-        "Empreses de totes les mides",
-        "Empreses industrials i tecnològiques",
-        "Empreses de serveis",
-        "Organitzacions en processos de transformació",
-        "Empreses que vulguin desenvolupar nous productes, processos o línies de negoci",
-        "Organitzacions compromeses amb el desenvolupament del talent intern",
+        "Mitjanes i grans empreses de qualsevol sector que vulguin impulsar la innovació des de dins de la seva organització.",
+      groups: [
+        {
+          heading: "Sectors i indústries:",
+          items: [
+            "Empreses industrials i tecnològiques",
+            "Empreses de serveis",
+          ],
+        },
+        {
+          heading: "Perfils i necessitats:",
+          items: [
+            "Organitzacions en processos de transformació",
+            "Empreses que vulguin desenvolupar nous productes, processos o línies de negoci",
+            "Organitzacions compromeses amb el desenvolupament del talent intern",
+          ],
+        },
       ],
       imageAlt: "Directiva presentant resultats d'innovació davant el seu equip",
     },
@@ -353,7 +369,7 @@ export const translations = {
     calendar: {
       title: "Dates clau",
       milestones: [
-        { date: "Fins el 24 de juliol", milestone: "Presentació de candidatures." },
+        { date: "Fins el 28 d'agost", milestone: "Presentació de candidatures." },
         { date: "27 de juliol", milestone: "Procés de selecció." },
         { date: "21 de setembre de 2026", milestone: "Inici del programa." },
         { date: "16 de desembre de 2026", milestone: "Demo Day i cloenda." },
