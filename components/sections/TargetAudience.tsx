@@ -29,20 +29,25 @@ export function TargetAudience() {
               {targetAudience.intro}
             </p>
 
-            <p className="mt-8 text-[1.05rem] font-semibold leading-snug text-white sm:text-lg">
-              {targetAudience.subheading}
-            </p>
-
-            <ul className="mt-5 space-y-4 sm:mt-6 sm:space-y-[1.2rem] lg:space-y-5">
-              {targetAudience.items.map((item) => (
-                <li key={item} className="flex items-start gap-3.5">
-                  <PixelBullet className="mt-1" />
-                  <span className="text-[1.05rem] font-bold leading-snug sm:text-[1.125rem] lg:text-[1.1875rem]">
-                    {item}
-                  </span>
-                </li>
+            <div className="mt-8 space-y-8">
+              {targetAudience.groups.map((group) => (
+                <div key={group.heading}>
+                  <p className="text-[1.05rem] font-semibold leading-snug text-white sm:text-lg">
+                    {group.heading}
+                  </p>
+                  <ul className="mt-4 space-y-3.5 sm:mt-5 sm:space-y-4">
+                    {group.items.map((item) => (
+                      <li key={item} className="flex items-start gap-3.5">
+                        <PixelBullet className="mt-1" />
+                        <span className="text-[1.05rem] font-bold leading-snug sm:text-[1.125rem] lg:text-[1.1875rem]">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 
