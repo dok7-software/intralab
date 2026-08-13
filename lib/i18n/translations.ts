@@ -171,6 +171,15 @@ export const translations = {
         "Este formulario está dirigido a empresas. Todos los campos son obligatorios.",
       fields: {
         companyName: "Nombre de empresa",
+        companySize: "¿Cuál es el tamaño de tu empresa?",
+        companySizes: {
+          "1-5": "1–5 empleados",
+          "5-10": "5–10 empleados",
+          "11-50": "11–50 empleados",
+          "51-200": "51–200 empleados",
+          "201-500": "201–500 empleados",
+          "500+": "Más de 500 empleados",
+        },
         sector: "Sector",
         address: "Dirección",
         partnerStatus: "¿Eres empresa socia de 22@Network Barcelona?",
@@ -395,6 +404,15 @@ export const translations = {
         "Aquest formulari està adreçat a empreses. Tots els camps són obligatoris.",
       fields: {
         companyName: "Nom de l'empresa",
+        companySize: "Quina és la mida de la teva empresa?",
+        companySizes: {
+          "1-5": "1–5 empleats",
+          "5-10": "5–10 empleats",
+          "11-50": "11–50 empleats",
+          "51-200": "51–200 empleats",
+          "201-500": "201–500 empleats",
+          "500+": "Més de 500 empleats",
+        },
         sector: "Sector",
         address: "Adreça",
         partnerStatus: "Sou empresa sòcia de 22@Network Barcelona?",

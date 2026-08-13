@@ -66,6 +66,7 @@ export function ApplicationForm() {
 
     const payload = {
       companyName: formData.get("nombre-empresa") as string,
+      companySize: formData.get("tamano-empresa") as string,
       sector: formData.get("sector") as string,
       address: formData.get("direccion") as string,
       partnerStatus: formData.get("empresa-socia") as string,
@@ -120,6 +121,27 @@ export function ApplicationForm() {
             <div className="sm:col-span-2">
               <Field id="nombre-empresa" label={fields.companyName} />
             </div>
+
+            <fieldset className="sm:col-span-2">
+              <legend className={labelClassName}>{fields.companySize}</legend>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {Object.entries(fields.companySizes).map(([value, label]) => (
+                  <label
+                    key={value}
+                    className="flex cursor-pointer items-center gap-3 rounded-xl border border-zinc-200 bg-brand-surface px-4 py-3 text-sm text-zinc-700"
+                  >
+                    <input
+                      type="radio"
+                      name="tamano-empresa"
+                      value={value}
+                      required
+                      className="h-4 w-4 accent-[#1f55a0]"
+                    />
+                    <span>{label}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
 
             <fieldset className="sm:col-span-2">
               <legend className={labelClassName}>{fields.sector}</legend>

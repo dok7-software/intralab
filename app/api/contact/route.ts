@@ -16,6 +16,7 @@ export async function POST(request: NextRequest) {
 
   const {
     companyName,
+    companySize,
     sector,
     address,
     partnerStatus,
@@ -27,6 +28,7 @@ export async function POST(request: NextRequest) {
 
   if (
     !companyName ||
+    !companySize ||
     !sector ||
     !address ||
     !partnerStatus ||
@@ -61,13 +63,24 @@ export async function POST(request: NextRequest) {
     other: "Otro",
   };
 
+  const companySizeLabels: Record<string, string> = {
+    "1-5": "1–5 empleados",
+    "5-10": "5–10 empleados",
+    "11-50": "11–50 empleados",
+    "51-200": "51–200 empleados",
+    "201-500": "201–500 empleados",
+    "500+": "Más de 500 empleados",
+  };
+
   const partnerLabel = partnerStatus === "si" ? "Sí" : "No";
   const sectorLabel = sectorLabels[sector] ?? sector;
+  const companySizeLabel = companySizeLabels[companySize] ?? companySize;
 
   const textContent = `
 Nueva inscripción de empresa para IntraLab 22@
 
 Nombre de empresa: ${companyName}
+Tamaño de empresa: ${companySizeLabel}
 Sector: ${sectorLabel}
 Dirección: ${address}
 Empresa socia 22@Network Barcelona: ${partnerLabel}
@@ -108,6 +121,12 @@ Teléfono: ${phone}
                     <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;">
                       <div style="font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#6b7280;font-weight:700;">Nombre de empresa</div>
                       <div style="font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#111827;margin-top:4px;">${escapeHtml(companyName)}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;">
+                      <div style="font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#6b7280;font-weight:700;">Tamaño de empresa</div>
+                      <div style="font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#111827;margin-top:4px;">${escapeHtml(companySizeLabel)}</div>
                     </td>
                   </tr>
                   <tr>
