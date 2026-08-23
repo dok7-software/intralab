@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
+import { assets } from "@/lib/assets";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { Locale } from "@/lib/i18n/translations";
 
@@ -65,16 +67,42 @@ export function Header() {
     setMenuOpen(false);
   }
 
+  const headerLogos = (
+    <div className="flex items-center gap-3 sm:gap-4">
+      <Image
+        src={assets.logos.programaPrimer}
+        alt="Programa PR1MER"
+        width={1071}
+        height={308}
+        className="h-6 w-auto object-contain sm:h-7 lg:h-8"
+      />
+      <Image
+        src={assets.logos.xe}
+        alt="Next Generation EU"
+        width={1521}
+        height={1164}
+        className="h-7 w-auto object-contain sm:h-8 lg:h-9"
+      />
+    </div>
+  );
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#171219]">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr]">
-        <a
-          href="#inicio"
-          className="font-anta text-lg leading-none sm:text-xl lg:col-start-1"
-          style={{ color: "#1f55a0" }}
-        >
-          IntraLab 22@
-        </a>
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4 lg:col-start-1">
+          <a
+            href="#inicio"
+            className="shrink-0 font-anta text-lg leading-none sm:text-xl"
+            style={{ color: "#1f55a0" }}
+          >
+            IntraLab 22@
+          </a>
+          <div
+            className="h-8 w-px shrink-0 bg-white/25 sm:h-9"
+            aria-hidden="true"
+          />
+          {headerLogos}
+        </div>
 
         <nav className="hidden items-center justify-center gap-6 lg:col-start-2 lg:flex">
           {sectionLinks.map((link) => (
@@ -101,7 +129,7 @@ export function Header() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 text-white lg:hidden"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/20 text-white lg:hidden"
           onClick={() => setMenuOpen((open) => !open)}
           aria-expanded={menuOpen}
           aria-label={menuLabel}

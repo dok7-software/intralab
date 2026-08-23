@@ -29,8 +29,10 @@ export const assets = {
     demoDay: "/imagenes/programa/demo-day.png",
   },
   logos: {
-    eu: "/logos/logo-union-europea.png",
-    generalitat: "/logos/logo-generalitat.png",
+    eu: "/logos/logo_UE_new.png",
+    generalitat: "/logos/logo_generaliltat_new.jpg",
     network22: "/logos/logo 22 network azul fondo blanco.png",
+    xe: "/logos/logo_XE_new.png",
+    programaPrimer: "/logos/logo_programa_primer_new.png",
   },
 } as const;
