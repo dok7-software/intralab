@@ -17,7 +17,7 @@ export const translations = {
       tagline:
         "Transforma el talento de tu empresa en intraemprendedores con impacto",
       duration: "Inicio 21/09 hasta 16/12",
-      applicationDeadline: "Candidaturas hasta el 28 de agosto",
+      applicationDeadline: "Candidaturas hasta el 4 de septiembre",
       coordinatesLabel: "Programa de:",
       fundedByLabel: "Financiado por:",
       fundingDisclaimer:
@@ -145,7 +145,7 @@ export const translations = {
     calendar: {
       title: "Fechas clave",
       milestones: [
-        { date: "Hasta el 28 de agosto", milestone: "Presentación de candidaturas." },
+        { date: "Hasta el 4 de septiembre", milestone: "Presentación de candidaturas." },
         { date: "27 de julio", milestone: "Proceso de selección." },
         { date: "21 de septiembre de 2026", milestone: "Inicio del programa." },
         { date: "16 de diciembre de 2026", milestone: "Demo Day y clausura." },
@@ -250,7 +250,7 @@ export const translations = {
       tagline:
         "Transforma el talent de la teva empresa en intraemprenedors amb impacte",
       duration: "Inici 21/09 fins al 16/12",
-      applicationDeadline: "Candidatures fins al 28 d'agost",
+      applicationDeadline: "Candidatures fins al 4 de setembre",
       coordinatesLabel: "Programa de:",
       fundedByLabel: "Finançat per:",
       fundingDisclaimer:
@@ -378,7 +378,7 @@ export const translations = {
     calendar: {
       title: "Dates clau",
       milestones: [
-        { date: "Fins el 28 d'agost", milestone: "Presentació de candidatures." },
+        { date: "Fins el 4 de setembre", milestone: "Presentació de candidatures." },
         { date: "27 de juliol", milestone: "Procés de selecció." },
         { date: "21 de setembre de 2026", milestone: "Inici del programa." },
         { date: "16 de desembre de 2026", milestone: "Demo Day i cloenda." },
