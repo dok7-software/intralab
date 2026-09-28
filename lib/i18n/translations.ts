@@ -21,7 +21,7 @@ export const translations = {
       taglineLine2: "en intraemprendedores con impacto",
       taglineLine1Mobile: "Transforma el talento de tu empresa",
       taglineLine2Mobile: "en intraemprendedores con impacto",
-      duration: "Inicio 21/09 hasta 16/12",
+      duration: "Inicio 28/09 hasta 16/12",
       coordinatesLabel: "Programa de:",
       fundedByLabel: "Financiado por:",
       fundingDisclaimer:
@@ -151,7 +151,7 @@ export const translations = {
       milestones: [
         { date: "Hasta el 4 de septiembre", milestone: "Presentación de candidaturas." },
         { date: "27 de julio", milestone: "Proceso de selección." },
-        { date: "21 de septiembre de 2026", milestone: "Inicio del programa." },
+        { date: "28 de septiembre de 2026", milestone: "Inicio del programa." },
         { date: "16 de diciembre de 2026", milestone: "Demo Day y clausura." },
       ],
       quote: "La innovación no siempre requiere de una gran inversión",
@@ -258,7 +258,7 @@ export const translations = {
       taglineLine2: "en intraemprenedors amb impacte",
       taglineLine1Mobile: "Transforma el talent de la teva empresa",
       taglineLine2Mobile: "en intraemprenedors amb impacte",
-      duration: "Inici 21/09 fins al 16/12",
+      duration: "Inici 28/09 fins al 16/12",
       coordinatesLabel: "Programa de:",
       fundedByLabel: "Finançat per:",
       fundingDisclaimer:
@@ -388,7 +388,7 @@ export const translations = {
       milestones: [
         { date: "Fins el 4 de setembre", milestone: "Presentació de candidatures." },
         { date: "27 de juliol", milestone: "Procés de selecció." },
-        { date: "21 de setembre de 2026", milestone: "Inici del programa." },
+        { date: "28 de setembre de 2026", milestone: "Inici del programa." },
         { date: "16 de desembre de 2026", milestone: "Demo Day i cloenda." },
       ],
       quote: "La innovació no sempre requereix una gran inversió",
