@@ -42,15 +42,15 @@ export function Hero() {
             {hero.title}
           </h1>
           <p className="mt-3 text-sm leading-snug text-white/80">
-            <span className="block">{hero.kickerLine1}</span>
-            <span className="block">{hero.kickerLine2}</span>
+            <span className="block">{hero.kickerLine1Mobile}</span>
+            <span className="block">{hero.kickerLine2Mobile}</span>
           </p>
         </div>
 
         <div className="px-6 pt-4 pb-2">
-          <p className="text-base leading-snug text-white">
-            <span className="block">{hero.taglineLine1}</span>
-            <span className="block">{hero.taglineLine2}</span>
+          <p className="text-sm leading-snug text-white">
+            <span className="block">{hero.taglineLine1Mobile}</span>
+            <span className="block">{hero.taglineLine2Mobile}</span>
           </p>
           <p className="mt-4 text-sm font-bold uppercase tracking-wide text-white/90">
             {hero.duration}
