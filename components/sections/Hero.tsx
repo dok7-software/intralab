@@ -41,11 +41,17 @@ export function Hero() {
           >
             {hero.title}
           </h1>
-          <p className="mt-3 text-sm leading-snug text-white/80">{hero.kicker}</p>
+          <p className="mt-3 text-sm leading-snug text-white/80">
+            <span className="block">{hero.kickerLine1}</span>
+            <span className="block">{hero.kickerLine2}</span>
+          </p>
         </div>
 
         <div className="px-6 pt-4 pb-2">
-          <p className="text-base leading-snug text-white">{hero.tagline}</p>
+          <p className="text-base leading-snug text-white">
+            <span className="block">{hero.taglineLine1}</span>
+            <span className="block">{hero.taglineLine2}</span>
+          </p>
           <p className="mt-4 text-sm font-bold uppercase tracking-wide text-white/90">
             {hero.duration}
           </p>
@@ -133,14 +139,16 @@ export function Hero() {
             >
               {hero.title}
             </h1>
-            <p className="mt-3 max-w-sm text-lg leading-snug text-white/80 xl:text-xl">
-              {hero.kicker}
+            <p className="mt-3 text-lg leading-snug text-white/80 xl:text-xl">
+              <span className="block">{hero.kickerLine1}</span>
+              <span className="block">{hero.kickerLine2}</span>
             </p>
           </div>
 
           <div>
-            <p className="max-w-md text-xl leading-snug text-white xl:text-2xl">
-              {hero.tagline}
+            <p className="text-xl leading-snug text-white xl:text-2xl">
+              <span className="block">{hero.taglineLine1}</span>
+              <span className="block">{hero.taglineLine2}</span>
             </p>
             <p className="mt-5 text-sm font-bold uppercase tracking-[0.15em] text-white/90">
               {hero.duration}

@@ -12,10 +12,11 @@ export const translations = {
       networkAlt: "22@Network Barcelona",
     },
     hero: {
-      kicker: "Programa de Preaceleración de Intraemprendimiento gratuito y online",
+      kickerLine1: "Programa de Preaceleración de Intraemprendimiento",
+      kickerLine2: "gratuito y online",
       title: "IntraLab 22@",
-      tagline:
-        "Transforma el talento de tu empresa en intraemprendedores con impacto",
+      taglineLine1: "Transforma el talento de tu empresa",
+      taglineLine2: "en intraemprendedores con impacto",
       duration: "Inicio 21/09 hasta 16/12",
       coordinatesLabel: "Programa de:",
       fundedByLabel: "Financiado por:",
@@ -244,10 +245,11 @@ export const translations = {
       networkAlt: "22@Network Barcelona",
     },
     hero: {
-      kicker: "Programa de Preacceleració d'Intraemprenedoria gratuït i online",
+      kickerLine1: "Programa de Preacceleració d'Intraemprenedoria",
+      kickerLine2: "gratuït i online",
       title: "IntraLab 22@",
-      tagline:
-        "Transforma el talent de la teva empresa en intraemprenedors amb impacte",
+      taglineLine1: "Transforma el talent de la teva empresa",
+      taglineLine2: "en intraemprenedors amb impacte",
       duration: "Inici 21/09 fins al 16/12",
       coordinatesLabel: "Programa de:",
       fundedByLabel: "Finançat per:",
